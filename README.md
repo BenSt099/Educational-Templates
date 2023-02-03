@@ -13,6 +13,7 @@ Latex has a lot of features to make your project beautiful. This repo provides s
 | Code-Listing | [ [CL](https://github.com/BenSt099/LaTeX-Templates/blob/main/Listing/CodeListing.tex) ] |
 | Sorting-Algorithm | [ [SA](https://github.com/BenSt099/LaTeX-Templates/blob/main/Sorting-Algorithm/SortingAlg.tex) ] | 
 | InfoBox | [ [IB](https://github.com/BenSt099/LaTeX-Templates/blob/main/InfoBox/InfoBox.tex) ] |
+| Stack | [ [St](https://github.com/BenSt099/LaTeX-Templates/blob/main/Stack/Stack.tex) ] |
 
 ## License
 
