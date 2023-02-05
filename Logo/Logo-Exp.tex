@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+
+\geometry{
+    left=1cm,
+    right=1cm,
+    top=1.5cm,
+    bottom=2.5cm
+}
+
+\usepackage{setspace}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{trees}
+
+\definecolor{darkred}{RGB}{158, 2, 2}
+\definecolor{darkgray}{RGB}{122, 116, 116}
+
+\begin{document}
+
+\pagenumbering{arabic}
+
+\begin{Large}
+    \begin{singlespace}
+       \begin{center}
+        \textbf{MIT-Logo - Template} \\
+        Version 1.0.0
+       \end{center} 
+    \end{singlespace}
+\end{Large}
+
+\vspace*{10mm}
+
+\begin{center}
+    \begin{tikzpicture}[thick,
+            red/.style = {draw=white, text=black, fill=darkred,  rounded corners=1mm, minimum size=2em}, 
+           gray/.style = {draw=white, text=white, fill=darkgray, rounded corners=1mm, minimum size=2em},
+          white/.style = {draw=white, text=white, minimum size=2em}
+            ]
+        \matrix [column sep=0.01cm, row sep=0.01cm]{
+            \node[red] {}; & \node[white] {}; & \node[red] {}; & \node[white] {}; & \node[red] {}; & \node[white] {}; & \node[red] {}; & \node[white] {}; & \node[red] {}; & \node[red] {}; & \node[red] {}; \\
+            \node[red] {}; & \node[white] {}; & \node[red] {}; & \node[white] {}; & \node[red] {}; & \node[white] {}; & \node[white] {}; & \node[white] {}; & \node[white] {}; & \node[white] {}; & \node[white] {}; \\
+            \node[red] {}; & \node[white] {}; & \node[red] {}; & \node[white] {}; & \node[red] {}; & \node[white] {}; & \node[gray] {}; & \node[white] {}; & \node[red] {}; & \node[white] {}; & \node[white] {}; \\
+            \node[red] {}; & \node[white] {}; & \node[white] {}; & \node[white] {}; & \node[red] {}; & \node[white] {}; & \node[gray] {}; & \node[white] {}; & \node[red] {}; & \node[white] {}; & \node[white] {}; \\
+            \node[red] {}; & \node[white] {}; & \node[white] {}; & \node[white] {}; & \node[red] {}; & \node[white] {}; & \node[gray] {}; & \node[white] {}; & \node[red] {}; & \node[white] {}; & \node[white] {}; \\
+        };
+    \end{tikzpicture}
+
+    \footnotesize Massachusetts Institute of Technology
+\end{center}
+
+\end{document}
