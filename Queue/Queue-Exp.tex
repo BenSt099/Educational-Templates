@@ -43,10 +43,11 @@
         \node[] (1) {$[0]$}; & \node[] (3) {$[1]$}; & \node[] (5) {$[2]$}; & \node[] (7) {$[3]$}; \\
         \node[selected] (2) {$a$}; & \node[main] (4) {$b$}; & \node[main] (6) {$c$}; & \node[main] (8) {$d$}; \\ 
     };
-    \draw (-12,0) -- (12, 0);
-    \draw (-12,-5) -- (12, -5);
+    \draw[draw=darkblue] (-12,0) -- (12, 0);
+    \draw[draw=darkblue] (-12,-5) -- (12, -5);
 
     \node[draw=white, text=white, fill=darkblue,rounded corners=1.5mm,minimum size=1em,label=right:Next Element] (A) at (0,-10) {};
+    \node[draw=white, text=white, fill=bluedot,rounded corners=1.5mm,minimum size=1em,label=right:Element in Queue] (A) at (0,-13) {};
     \end{tikzpicture}
 \end{center}
     
