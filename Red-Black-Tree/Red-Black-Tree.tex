@@ -13,6 +13,8 @@
 \usepackage{setspace}
 \usepackage{tikz}
 \usetikzlibrary{trees}
+\usetikzlibrary{arrows}
+\usetikzlibrary{arrows.meta}
 
 \begin{document}
  
@@ -32,27 +34,32 @@
 \begin{center}
     
     \begin{tikzpicture}[level distance=1.6cm,
-        level 1/.style={sibling distance=7cm},
-        level 2/.style={sibling distance=3.2cm},
-        node distance=1.5cm,
+        level 1/.style={sibling distance=8cm},
+        level 2/.style={sibling distance=4cm},
+        level 3/.style={sibling distance=2cm},
+        node distance=3.5cm,
+        ->,-{Stealth[round,open,fill=black]},
         blackNode/.style = {shape=circle,fill=darkgray,text=white,minimum size=2em},
         redNode/.style = {fill=purple,text=white,rounded corners=2mm,minimum size=2em},
-        endNode/.style = {shape=circle,draw=black,fill=darkgray,text=white}
+        endNode/.style = {shape=circle,draw=black,fill=darkgray,text=white},
+        innerBlackNode/.style = {shape=circle,fill=darkgray,text=white,minimum size=2em}, % inner node for double-black-state
+        innerRedNode/.style = {shape=circle,fill=purple,text=white,minimum size=2em}, % inner node for red-black-state
+        outerNode/.style = {shape=circle,very thick,draw=darkgray,fill=white,outer sep=0.2cm, inner sep=-0.6mm, distance=0.01cm,line width=0.9mm}
         ]
-        \node[blackNode] {9}
+        \node[outerNode] {\tikz\node[innerBlackNode]{9};}
         child {node[redNode] {2} 
         child {node[blackNode] {1}
         child{node[endNode] {}}
-        child{node[left=1mm][endNode] {}}}
+        child{node[endNode] {}}}
         child {node[blackNode] {3}
-        child{node[right=2mm][endNode] {}}
+        child{node[endNode] {}}
         child{node[endNode] {}}}}
         child {node[blackNode] {11} 
         child {node[blackNode] {10} 
         child {node[endNode] {}} 
-        child {node[left=1mm][endNode] {}}} 
+        child {node[endNode] {}}} 
         child {node[redNode] {12} 
-        child {node[right=1.2mm][endNode] {}} 
+        child {node[endNode] {}} 
         child {node[endNode] {}}}};
     \end{tikzpicture}
 \end{center}
