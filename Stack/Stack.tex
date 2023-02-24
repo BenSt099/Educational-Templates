@@ -13,6 +13,7 @@
 \usepackage{setspace}
 \usepackage{xcolor}
 \usepackage{tikz}
+\usepackage{tkz-graph}
 \usetikzlibrary{trees}
 
 \definecolor{lightblue}{RGB}{124, 214, 235}
@@ -51,5 +52,24 @@
         \node[main] at (2, 2.3) {$3$};
         \node[draw=white, text=white, fill=middleblue,  rounded corners=2mm, minimum size=2em] at (2, -1) {Pop()};
     \end{tikzpicture}
+
+    \begin{center}
+        \begin{tikzpicture}[thick, 
+            main/.style = {draw=white, text=black, fill=lightblue,rounded corners=2mm,minimum size=2em}, scale=0.2,
+            selected/.style = {draw=white, text=white, fill=middleblue,rounded corners=2mm,minimum size=2em},
+            EdgeStyle/.append style = {->, draw=darkblue, thick}]
+            \matrix [column sep=0.1cm, row sep=0.02cm]{
+            \node[selected] (3) {$c$};  \\ 
+            \node[main] (2) {$b$};  \\ 
+            \node[main] (1) {$a$};  \\ 
+        };
+        \draw[draw=darkblue,very thick] (-3,-7.5) -- (-3, 13);
+        \draw[draw=darkblue,very thick] (3,-7.5) -- (3, 13);
+        \draw[draw=darkblue,very thick] (-3,-7.5) -- (3, -7.5);
+
+        \node[draw=white, text=white, fill=middleblue,rounded corners=1.5mm,minimum size=1em,label=right:Top Element] (A) at (0,-13) {}; % Distance between nodes: 3
+        \node[draw=white, text=white, fill=lightblue,rounded corners=1.5mm,minimum size=1em,label=right:Element in Stack] (A) at (0,-16) {};
+        \end{tikzpicture}
+    \end{center}
 
 \end{document}
