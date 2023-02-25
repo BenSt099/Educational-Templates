@@ -3,6 +3,7 @@
 \usetikzlibrary{arrows.meta} 
 \usetikzlibrary{shapes.geometric} 
 \usetikzlibrary{decorations,decorations.pathreplacing}
+\usetikzlibrary{shadings}
 
 \definecolor{darkyellow}{RGB}{252, 188, 10}
 
@@ -35,34 +36,54 @@
 \begin{center}
     
     \begin{tikzpicture}
-        \draw[help lines] (-7,7) grid (7,-7);
+        \draw[help lines] (-7,7) grid (7,-7); % Only for Development
         % Lipid bilayer
         \draw[decorate, decoration={lipidleaflet, mirror},fill=yellow,draw=darkyellow]
         (-8, -2.8) -- (8, -2.8);
         \draw[decorate, decoration={lipidleaflet},fill=yellow,draw=darkyellow]
         (-8, -2) -- (8, -2);
         
+        % Labels 
+        \draw (0, 0) node {Extracellular space};  
+        \draw (0, -5) node {Intracellular space}; 
+
+
         %  Shapes
+        \node[shape=rectangle,
+              draw=magenta!10,
+              fill=magenta!20,
+              fill opacity=0.9,
+              minimum height = 0.4cm,
+              minimum width = 1.2cm] at (-6.4,-2.4) {Cell Membrane};
+        \node[shape=rectangle,
+              draw,
+              top color=yellow!40!white!80,
+              bottom color=orange!90!black!90,
+              text=black,
+              rotate=90,
+              minimum height = 0.5cm,
+              minimum width = 4cm] at (6,-2.4) {Concentration};
         \node[shape=rectangle,
         draw=magenta!10,
         rotate=90,
               fill=magenta!10,
               minimum height = 0.4cm,
-              minimum width = 1.2cm] (A) at (-4,-2.4) {};
-              \node[shape=ellipse,
+              minimum width = 1.2cm] at (-4,-2.4) {};
+        \node[shape=ellipse,
               draw=black,
               rotate=90,
               fill=magenta!10,
               minimum height = 0.2cm,
-              minimum width = 1.5cm] (B) at (-4.2,-2.4) {};
-              \node[shape=ellipse,
+              minimum width = 1.5cm] at (-4.2,-2.4) {};
+        \node[shape=ellipse,
               draw=black,
               rotate=90,
               fill=magenta!10,
               minimum height = 0.2cm,
-              minimum width = 1.5cm] (C) at (-3.8,-2.4) {};
-              
-        \draw [-{Stealth[length=2mm]},very thick,draw=red] (-4,-1) -- (-4,-4); 
+              minimum width = 1.5cm] at (-3.8,-2.4) {};
+        
+        \draw[-{Stealth[length=2mm]},very thick,draw=red] (-4,-1) -- (-4,-4); 
+        \node[shape=circle,fill=red,draw] at (-4,-1) {}; 
         \node[shape=cylinder,
               draw = violet,
               rotate=90,
@@ -72,12 +93,13 @@
               cylinder end fill = magenta!40,
               minimum width = 0.8cm,
               minimum height = 2cm,
-              aspect=0.50] (D) at (-2,-2.6) {Carrier};
+              aspect=0.50] at (-2,-2.6) {Carrier};
         \draw [-{Stealth[length=2mm]},very thick,draw=red] (-2,-1) -- (-2,-1.6); 
         \draw [-{Stealth[length=2mm]},very thick,draw=red] (-2,-3.5) -- (-2,-4); 
-      
-        \draw (0, -10) node {Membrane Transport}; % Explanation        
+        \node[shape=circle,fill=red,draw] at (-2,-1) {};
+             
     \end{tikzpicture}
+    Membrane Transport
 \end{center}
 
 \end{document}
