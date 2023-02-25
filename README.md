@@ -18,6 +18,7 @@ Latex has a lot of features to make your project beautiful. This repo provides s
 | Queue | [ [QU](https://github.com/BenSt099/LaTeX-Templates/blob/main/Queue/Queue-Exp.tex) ] |
 | Membrane Transport| [ [MT](https://github.com/BenSt099/LaTeX-Templates/blob/main/Membrane-Transport/MTrans.tex) ] |
 | Animal Cell| [ [AC](https://github.com/BenSt099/LaTeX-Templates/blob/main/Animal-Cell/ACell.tex) ] |
+| PTree Of Primates| [ [PTP](https://github.com/BenSt099/LaTeX-Templates/blob/main/Phylogen-Tree-Primates/PT-Primates.tex) ] |
 
 ## License
 
