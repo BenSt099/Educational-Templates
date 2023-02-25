@@ -65,7 +65,7 @@
             \begin{tikzpicture}[framed,background rectangle/.style={thick,draw=black, rounded corners}]
                   %\draw[help lines] (-7,7) grid (7,-7); % Only for Development
                   
-                  % Inside & Outside Background
+                  % Inside & Outside & Yellow Lipid Background
                   \node[shape=rectangle,
                         rounded corners=1mm,
                         draw=cyan!10,
@@ -80,6 +80,13 @@
                         fill opacity=0.9,
                         minimum height = 4.8cm,
                         minimum width = 17.2cm] at (0,-4.8) {};
+                  \node[shape=rectangle,
+                        rounded corners=1mm,
+                        draw=yellow!10,
+                        fill=yellow!20,
+                        fill opacity=0.9,
+                        minimum height = 1.3cm,
+                        minimum width = 16cm] at (-0.1,-2.4) {};
                   
                   % Lipid bilayer
                   \draw[decorate, decoration={lipidleaflet, mirror},fill=yellow,draw=darkyellow]
