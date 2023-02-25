@@ -1,24 +1,26 @@
 \documentclass{article}
 \usepackage{tikz}
-\usetikzlibrary{arrows.meta} 
-\usetikzlibrary{shapes.geometric} 
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{shapes.symbols}
 \usetikzlibrary{decorations,decorations.pathreplacing}
 \usetikzlibrary{shadings}
+\usetikzlibrary{backgrounds}
 
 \definecolor{darkyellow}{RGB}{252, 188, 10}
+\definecolor{brightorange}{RGB}{255, 111, 0}
 
 % BASED ON WORK OF: Henrik Skov Midtiby
 % LINK: https://texample.net/tikz/examples/lipid-vesicle/
-
 
 \usepackage[utf8]{inputenc}
 \usepackage{geometry}
 
 \geometry{
-    left=1cm,
-    right=1cm,
-    top=1.5cm,
-    bottom=2.5cm
+      left=1cm,
+      right=1cm,
+      top=1.5cm,
+      bottom=2.5cm
 }
 
 \usepackage{setspace}
@@ -28,112 +30,158 @@
 
 \begin{Large}
       \begin{singlespace}
-         \begin{center}
-          \textbf{Membrane Transport - Template} \\
-          Version 1.0.0
-         \end{center} 
+            \begin{center}
+                  \textbf{Membrane Transport - Template} \\
+                  Version 1.0.0
+            \end{center}
       \end{singlespace}
-  \end{Large}
-  
-  \vspace*{10mm}
+\end{Large}
+
+\vspace*{10mm}
 
 % Define decoration
 \pgfdeclaredecoration{lipidleaflet}{initial}
 {
-  % Place as many segments as possible along the path to decorate
-  % the minimum distance between two segments is set to 7 pt.
-  \state{initial}[width=\pgfdecoratedpathlength/floor (\pgfdecoratedpathlength/7pt)]
-  {
-    % Draw the two acyl chains
-    \pgfpathmoveto{\pgfpoint{-1pt}{0pt}}
-    \pgfpathlineto{\pgfpoint{-1pt}{-10pt}}
-    \pgfpathmoveto{\pgfpoint{1pt}{0pt}}
-    \pgfpathlineto{\pgfpoint{1pt}{-10pt}}
-    % Draw the head group
-    \pgfpathmoveto{\pgfpoint{1pt}{0pt}}
-    \pgfpathcircle{\pgfpoint{0pt}{2pt}}{2.5pt}
-  }
-  \state{final}
-  {
-    \pgfpathmoveto{\pgfpointdecoratedpathlast}
-  }
+      % Place as many segments as possible along the path to decorate
+      % the minimum distance between two segments is set to 7 pt.
+      \state{initial}[width=\pgfdecoratedpathlength/floor (\pgfdecoratedpathlength/7pt)]
+      {
+            % Draw the two acyl chains
+            \pgfpathmoveto{\pgfpoint{-1pt}{0pt}}
+            \pgfpathlineto{\pgfpoint{-1pt}{-10pt}}
+            \pgfpathmoveto{\pgfpoint{1pt}{0pt}}
+            \pgfpathlineto{\pgfpoint{1pt}{-10pt}}
+            % Draw the head group
+            \pgfpathmoveto{\pgfpoint{1pt}{0pt}}
+            \pgfpathcircle{\pgfpoint{0pt}{2pt}}{2.5pt}
+      }
+      \state{final}
+      {
+            \pgfpathmoveto{\pgfpointdecoratedpathlast}
+      }
 }
-\begin{center}
-    
-    \begin{tikzpicture}
-        \draw[help lines] (-7,7) grid (7,-7); % Only for Development
-        % Lipid bilayer
-        \draw[decorate, decoration={lipidleaflet, mirror},fill=yellow,draw=darkyellow]
-        (-8, -2.8) -- (8, -2.8);
-        \draw[decorate, decoration={lipidleaflet},fill=yellow,draw=darkyellow]
-        (-8, -2) -- (8, -2);
-        
-        % Labels 
-        \draw (0, 0) node {Extracellular space};  
-        \draw (0, -5) node {Intracellular space}; 
+\begin{figure}[h]
+      \begin{center}
+            \begin{tikzpicture}[framed,background rectangle/.style={thick,draw=black, rounded corners}]
+                  %\draw[help lines] (-7,7) grid (7,-7); % Only for Development
+                  
+                  % Inside & Outside Background
+                  \node[shape=rectangle,
+                        rounded corners=1mm,
+                        draw=cyan!10,
+                        fill=cyan!20,
+                        fill opacity=0.9,
+                        minimum height = 4.8cm,
+                        minimum width = 17.2cm] at (0,0) {};
+                  \node[shape=rectangle,
+                        rounded corners=1mm,
+                        draw=magenta!10,
+                        fill=magenta!20,
+                        fill opacity=0.9,
+                        minimum height = 4.8cm,
+                        minimum width = 17.2cm] at (0,-4.8) {};
+                  
+                  % Lipid bilayer
+                  \draw[decorate, decoration={lipidleaflet, mirror},fill=yellow,draw=darkyellow]
+                  (-8, -2.8) -- (8, -2.8);
+                  \draw[decorate, decoration={lipidleaflet},fill=yellow,draw=darkyellow]
+                  (-8, -2) -- (8, -2);
 
+                  % Labels 
+                  \draw (0, 1) node {Extracellular space};
+                  \draw (0, -6) node {Intracellular space};
 
-        %  Shapes
-        \node[shape=rectangle,
-              draw=magenta!10,
-              fill=magenta!20,
-              fill opacity=0.9,
-              minimum height = 0.4cm,
-              minimum width = 1.2cm] at (-6.4,-2.4) {Cell Membrane};
-        \node[shape=rectangle,
-              draw,
-              top color=yellow!40!white!80,
-              bottom color=orange!90!black!90,
-              text=black,
-              rotate=90,
-              minimum height = 0.5cm,
-              minimum width = 4cm] at (6,-2.4) {Concentration of $K^+$};
-      \node[shape=rectangle,
-              draw,
-              top color=red,
-              bottom color=white,
-              text=black,
-              rotate=90,
-              minimum height = 0.5cm,
-              minimum width = 4cm] at (5.5,-2.4) {Concentration of $Na^+$};
-        \node[shape=rectangle,
-        draw=magenta!10,
-        rotate=90,
-              fill=magenta!10,
-              minimum height = 0.4cm,
-              minimum width = 1.2cm] at (-4,-2.4) {};
-        \node[shape=ellipse,
-              draw=black,
-              rotate=90,
-              fill=magenta!10,
-              minimum height = 0.2cm,
-              minimum width = 1.5cm] at (-4.2,-2.4) {};
-        \node[shape=ellipse,
-              draw=black,
-              rotate=90,
-              fill=magenta!10,
-              minimum height = 0.2cm,
-              minimum width = 1.5cm] at (-3.8,-2.4) {};
-        
-        \draw[-{Stealth[length=2mm]},very thick,draw=red] (-4,-1) -- (-4,-4); 
-        \node[shape=circle,fill=red,draw] at (-4,-1) {}; 
-        \node[shape=cylinder,
-              draw = violet,
-              rotate=90,
-              text=purple,
-              cylinder uses custom fill, 
-              cylinder body fill = magenta!10,
-              cylinder end fill = magenta!40,
-              minimum width = 0.8cm,
-              minimum height = 2cm,
-              aspect=0.50] at (-2,-2.6) {Carrier};
-        \draw [-{Stealth[length=2mm]},very thick,draw=red] (-2,-1) -- (-2,-1.6); 
-        \draw [-{Stealth[length=2mm]},very thick,draw=red] (-2,-3.5) -- (-2,-4); 
-        \node[shape=circle,fill=red,draw] at (-2,-1) {};
-             
-    \end{tikzpicture}
-    
-    Membrane Transport
-\end{center}
+                  \node[rounded corners=1mm,minimum height = 0.5cm,minimum width = 2cm,draw,fill=cyan] at (-6,1) {Outside};
+                  \node[rounded corners=1mm,minimum height = 0.5cm,minimum width = 2cm,draw,fill=pink] at (-6,-6) {Inside};
+
+                  %  Shapes
+                  \node[shape=rectangle,
+                        rounded corners=1mm,
+                        draw=purple!90,
+                        fill=purple!60,
+                        fill opacity=0.8,
+                        minimum height = 0.4cm,
+                        minimum width = 1.2cm] at (-6.7,-2.4) {Cell Membrane};
+                  \node[draw,
+                        top color=yellow!40!white!80,
+                        bottom color=orange!90!black!90,
+                        text=black,
+                        rotate=90,
+                        rounded corners=1mm,
+                        minimum height = 0.5cm,
+                        minimum width = 4cm] at (6,-2.4) {Concentration of $K^+$};
+                  \node[draw,
+                        top color=red,
+                        bottom color=white,
+                        text=black,
+                        rotate=90,
+                        rounded corners=1mm,
+                        minimum height = 0.5cm,
+                        minimum width = 4cm] at (5.5,-2.4) {Concentration of $Na^+$};
+                  \node[shape=rectangle,
+                        draw=magenta!10,
+                        rotate=90,
+                        fill=magenta!10,
+                        minimum height = 0.4cm,
+                        minimum width = 1.2cm] at (-4,-2.4) {};
+                  \node[shape=ellipse,
+                        draw=violet,
+                        rotate=90,
+                        fill=magenta!10,
+                        minimum height = 0.2cm,
+                        minimum width = 1.5cm] at (-4.2,-2.4) {};
+                  \node[shape=ellipse,
+                        draw=violet,
+                        rotate=90,
+                        fill=magenta!10,
+                        minimum height = 0.2cm,
+                        minimum width = 1.5cm] at (-3.8,-2.4) {};
+
+                  \draw[-{Stealth[length=2mm]},very thick,draw=red] (-4,-1) -- (-4,-4);
+                  \node[shape=circle,fill=red,draw] at (-4,-1) {};
+                  \node[shape=cylinder,
+                        draw = violet,
+                        rotate=90,
+                        text=purple,
+                        cylinder uses custom fill,
+                        cylinder body fill = magenta!10,
+                        cylinder end fill = magenta!40,
+                        minimum width = 0.8cm,
+                        minimum height = 2cm,
+                        aspect=0.50] at (-2,-2.6) {Carrier};
+                  \node[shape=ellipse,
+                        draw=violet,
+                        rotate=90,
+                        fill=magenta!10,
+                        minimum height = 0.8cm,
+                        minimum width = 1.9cm] at (1,-2.4) {};
+                  \node[shape=starburst,
+                  draw,
+                  fill=brightorange,
+                  starburst points=12,
+                  inner sep=0.1cm,
+                  label=right:{\color{brightorange} \textbf{Energy}},
+                  starburst point height=0.3cm] at (1.6,-3.9) {};
+                  \draw [-{Stealth[length=2mm]},very thick,draw=red] (-2,-1) -- (-2,-1.6);
+                  \draw [-{Stealth[length=2mm]},very thick,draw=red] (-2,-3.5) -- (-2,-4);
+                  \node[shape=circle,fill=red,draw] at (-2,-1) {};
+
+                  \draw [-{Stealth[length=2mm]},very thick,draw=black] (-5,-1) -- (-5,-4);
+                  \node[shape=circle,fill=white,draw=black] at (-5,-1) {};
+
+                  \draw [{Stealth[length=2mm]}-,very thick,draw=red] (1,-3) -- (1,-3.5);
+                  \draw [{Stealth[length=2mm]}-,very thick,draw=red] (1,-1) -- (1,-1.45);
+                  \node[shape=circle,fill=red,draw] at (1,-3.6) {};
+
+                  \draw[line width=0.7mm] (-5.5,-4.3) -- (-5.5,-4.4) -- (-1.5,-4.4) -- (-1.5,-4.3);
+                  \draw (-3.5, -4.7) node {Passive Transport};
+
+                  \draw[line width=0.7mm] (-0.5,-4.3) -- (-0.5,-4.4) -- (2.5,-4.4) -- (2.5,-4.3);
+                  \draw (1, -4.7) node {Active Transport};
+
+            \end{tikzpicture}
+      \end{center}
+      \caption{Membrane Transport}
+\end{figure}
 
 \end{document}
