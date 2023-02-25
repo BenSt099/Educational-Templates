@@ -16,6 +16,7 @@ Latex has a lot of features to make your project beautiful. This repo provides s
 | Stack | [ [ST](https://github.com/BenSt099/LaTeX-Templates/blob/main/Stack/Stack.tex) ] |
 | Logo | [ [LO](https://github.com/BenSt099/LaTeX-Templates/blob/main/Logo/Logo-Exp.tex) ] |
 | Queue | [ [QU](https://github.com/BenSt099/LaTeX-Templates/blob/main/Queue/Queue-Exp.tex) ] |
+| Membrane Transport| [ [MT](https://github.com/BenSt099/LaTeX-Templates/blob/main/Membrane-Transport/MTrans.tex) ] |
 
 ## License
 

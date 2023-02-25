@@ -1,0 +1,83 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta} 
+\usetikzlibrary{shapes.geometric} 
+\usetikzlibrary{decorations,decorations.pathreplacing}
+
+\definecolor{darkyellow}{RGB}{252, 188, 10}
+
+% BASED ON WORK OF: Henrik Skov Midtiby
+% LINK: https://texample.net/tikz/examples/lipid-vesicle/
+
+\begin{document}
+
+% Define decoration
+\pgfdeclaredecoration{lipidleaflet}{initial}
+{
+  % Place as many segments as possible along the path to decorate
+  % the minimum distance between two segments is set to 7 pt.
+  \state{initial}[width=\pgfdecoratedpathlength/floor (\pgfdecoratedpathlength/7pt)]
+  {
+    % Draw the two acyl chains
+    \pgfpathmoveto{\pgfpoint{-1pt}{0pt}}
+    \pgfpathlineto{\pgfpoint{-1pt}{-10pt}}
+    \pgfpathmoveto{\pgfpoint{1pt}{0pt}}
+    \pgfpathlineto{\pgfpoint{1pt}{-10pt}}
+    % Draw the head group
+    \pgfpathmoveto{\pgfpoint{1pt}{0pt}}
+    \pgfpathcircle{\pgfpoint{0pt}{2pt}}{2.5pt}
+  }
+  \state{final}
+  {
+    \pgfpathmoveto{\pgfpointdecoratedpathlast}
+  }
+}
+\begin{center}
+    
+    \begin{tikzpicture}
+        \draw[help lines] (-7,7) grid (7,-7);
+        % Lipid bilayer
+        \draw[decorate, decoration={lipidleaflet, mirror},fill=yellow,draw=darkyellow]
+        (-8, -2.8) -- (8, -2.8);
+        \draw[decorate, decoration={lipidleaflet},fill=yellow,draw=darkyellow]
+        (-8, -2) -- (8, -2);
+        
+        %  Shapes
+        \node[shape=rectangle,
+        draw=magenta!10,
+        rotate=90,
+              fill=magenta!10,
+              minimum height = 0.4cm,
+              minimum width = 1.2cm] (A) at (-4,-2.4) {};
+              \node[shape=ellipse,
+              draw=black,
+              rotate=90,
+              fill=magenta!10,
+              minimum height = 0.2cm,
+              minimum width = 1.5cm] (B) at (-4.2,-2.4) {};
+              \node[shape=ellipse,
+              draw=black,
+              rotate=90,
+              fill=magenta!10,
+              minimum height = 0.2cm,
+              minimum width = 1.5cm] (C) at (-3.8,-2.4) {};
+              
+        \draw [-{Stealth[length=2mm]},very thick,draw=red] (-4,-1) -- (-4,-4); 
+        \node[shape=cylinder,
+              draw = violet,
+              rotate=90,
+              text=purple,
+              cylinder uses custom fill, 
+              cylinder body fill = magenta!10,
+              cylinder end fill = magenta!40,
+              minimum width = 0.8cm,
+              minimum height = 2cm,
+              aspect=0.50] (D) at (-2,-2.6) {Carrier};
+        \draw [-{Stealth[length=2mm]},very thick,draw=red] (-2,-1) -- (-2,-1.6); 
+        \draw [-{Stealth[length=2mm]},very thick,draw=red] (-2,-3.5) -- (-2,-4); 
+      
+        \draw (0, -10) node {Membrane Transport}; % Explanation        
+    \end{tikzpicture}
+\end{center}
+
+\end{document}
