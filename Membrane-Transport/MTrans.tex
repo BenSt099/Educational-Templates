@@ -10,7 +10,32 @@
 % BASED ON WORK OF: Henrik Skov Midtiby
 % LINK: https://texample.net/tikz/examples/lipid-vesicle/
 
+
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+
+\geometry{
+    left=1cm,
+    right=1cm,
+    top=1.5cm,
+    bottom=2.5cm
+}
+
+\usepackage{setspace}
+\usepackage{xcolor}
+
 \begin{document}
+
+\begin{Large}
+      \begin{singlespace}
+         \begin{center}
+          \textbf{Membrane Transport - Template} \\
+          Version 1.0.0
+         \end{center} 
+      \end{singlespace}
+  \end{Large}
+  
+  \vspace*{10mm}
 
 % Define decoration
 \pgfdeclaredecoration{lipidleaflet}{initial}
@@ -107,6 +132,7 @@
         \node[shape=circle,fill=red,draw] at (-2,-1) {};
              
     \end{tikzpicture}
+    
     Membrane Transport
 \end{center}
 
