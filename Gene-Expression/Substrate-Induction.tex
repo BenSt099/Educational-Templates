@@ -47,7 +47,7 @@
        (path picture bounding box.north west) -- (path picture bounding box.south east) 
        (path picture bounding box.south west) -- (path picture bounding box.north east);
       }}]
-      \draw[help lines] (-7,7) grid (7,-7); % Only for Development
+      %\draw[help lines] (-7,7) grid (7,-7); % Only for Development
     
       \node[shape=rectangle,
         rounded corners=1mm,
@@ -77,17 +77,21 @@
         minimum height = 1cm,
         minimum width = 2cm] at (-3.5,0) {\textbf{Promoter}};
 
-      \draw[dashed,fill=green!50!black!70,opacity=0.8,ultra thick]
-        (-4.5,0.5) .. controls (-3.5,2.5) and (-3.5,2.5) .. (-2.5,0.5);
-        
-      \draw[dashed,fill=green!50!black!70,opacity=0.8,ultra thick]
-        (-4.5,-0.5) .. controls (-3.5,-2.5) and (-3.5,-2.5) .. (-2.5,-0.5);
-
-      \draw[-{Stealth[length=4mm]},ultra thick,draw=black] (-4.5,1.5) -- (-1.5,1.5);
-
+      \node[shape=ellipse,
+                        draw=violet,
+                        rotate=90,
+                        opacity=0.6,
+                        fill=magenta!10,
+                        minimum height = 3cm,
+                        minimum width = 4cm] at (-3.8,0) {};
+      \draw[-{Stealth[length=4mm]},ultra thick,draw=black] (-3.8,1.5) -- (-1.5,1.5);
       \node [draw,circle,very thick,cross,minimum width=0.8cm] at (-0.8,1.5){}; 
 
-      % 0.2 - 0.6 - 0.2
+      \node[shape=rectangle,
+      text=violet,
+      minimum height = 1cm,
+      minimum width = 1cm] at (-7,1.5) {\textbf{RNA-Polymerase}};
+
       \draw[fill=magenta!70!black!90] 
         (-1,-0.5) -- (-2,-0.5) -- (-2,0.5) -- (2,0.5) -- 
         (2,-0.5) -- (0.8,-0.5) -- (0.8,-0.1) -- (0.2,-0.1) --
@@ -136,7 +140,7 @@
         minimum height = 1cm,
         minimum width = 1cm] at (-8.2,-1.5) {\textbf{Transcription}};
         \draw[draw=red,ultra thick]
-        (-8,-2.8) -- (-4,-2.8);
+        (-9,-2.8) -- (-4,-2.8);
         \node[shape=rectangle,
         minimum height = 1cm,
         minimum width = 1cm] at (-3.1,-2.8) {\textbf{mRNA}};
