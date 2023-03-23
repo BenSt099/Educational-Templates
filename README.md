@@ -18,6 +18,7 @@ Latex has a lot of features to make your project beautiful. This repo provides s
 | Queue | [ [QU](https://github.com/BenSt099/LaTeX-Templates/blob/main/Queue/Queue-Exp.tex) ] |
 | Membrane Transport| [ [MT](https://github.com/BenSt099/LaTeX-Templates/blob/main/Membrane-Transport/MTrans.tex) ] |
 | Gene Regulation | [ [GE](https://github.com/BenSt099/LaTeX-Templates/blob/main/Gene-Regulation/Gene-Regulation.tex) ] |
+| Bootstrap Colors | [ [BC](https://github.com/BenSt099/LaTeX-Templates/blob/main/Bootstrap-Colors/colorrange.sty) ] |
 
 ## License
 
