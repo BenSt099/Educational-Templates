@@ -1,7 +1,7 @@
 # LaTeX compiled files (https://github.com/github/gitignore/blob/main/TeX.gitignore):
 
 ideas/
-
+Generate-RBTree/
 *.pdf
 
 ## Core latex/pdflatex auxiliary files:
