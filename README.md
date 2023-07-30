@@ -19,6 +19,7 @@ Latex has a lot of features to make your project beautiful. This repo provides s
 | Membrane Transport| [ [MT](https://github.com/BenSt099/LaTeX-Templates/blob/main/Membrane-Transport/MTrans.tex) ] |
 | Gene Regulation | [ [GE](https://github.com/BenSt099/LaTeX-Templates/blob/main/Gene-Regulation/Gene-Regulation.tex) ] |
 | Bootstrap Colors | [ [BC](https://github.com/BenSt099/LaTeX-Templates/blob/main/Bootstrap-Colors/bootstrapcolors.sty) ] |
+| Logical Gates | [ [LG](https://github.com/BenSt099/LaTeX-Templates/blob/main/LogicGates/Gates.tex) ] |
 
 ## License
 
