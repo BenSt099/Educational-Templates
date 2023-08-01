@@ -1,0 +1,25 @@
+\documentclass{article}
+
+% Based upon: https://tex.stackexchange.com/questions/215895/color-gradient-in-tikzpicture-from-top-to-bottom-corner
+
+\usepackage[dvipsnames]{xcolor} % must be above tikz-import
+% Color-Overview: https://de.overleaf.com/learn/latex/Using_colours_in_LaTeX
+
+\usepackage{tikz}
+
+\begin{document}
+    \section*{Color Gradients}
+
+    \begin{center}
+        \begin{tikzpicture}[remember picture,overlay]
+            \node [ shading = axis,
+                    rectangle, 
+                    left color=Blue, 
+                    right color=WildStrawberry,
+                    shading angle=90, 
+                    anchor=north, 
+                    minimum width=\paperwidth / 2, %e.g. \paperwidth or 4.5cm
+                    minimum height=5.5cm] (box) at (0,0){};
+        \end{tikzpicture}
+    \end{center}
+\end{document}
