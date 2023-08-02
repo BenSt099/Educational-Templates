@@ -6,21 +6,58 @@ Latex has a lot of features to make your project beautiful. This repo provides s
 
 ## Examples
 
-| Name of Template | Link |
-|    :----:   |    :----:   |
-| Red-Black-Trees      | [ [RBT](https://github.com/BenSt099/LaTeX-Templates/blob/main/Red-Black-Tree/Red-Black-Tree.tex) ]       |
-| Shortest-Path-Graph   | [ [SPG](https://github.com/BenSt099/LaTeX-Templates/blob/main/Shortest-Path-Graph/Shortest-Path-Graph.tex) ]        |
-| Code-Listing | [ [CL](https://github.com/BenSt099/LaTeX-Templates/blob/main/Listing/CodeListing.tex) ] |
-| Sorting-Algorithm | [ [SA](https://github.com/BenSt099/LaTeX-Templates/blob/main/Sorting-Algorithm/SortingAlg.tex) ] | 
-| InfoBox | [ [IB](https://github.com/BenSt099/LaTeX-Templates/blob/main/InfoBox/InfoBox.tex) ] |
-| Stack | [ [ST](https://github.com/BenSt099/LaTeX-Templates/blob/main/Stack/Stack.tex) ] |
-| Queue | [ [QU](https://github.com/BenSt099/LaTeX-Templates/blob/main/Queue/Queue-Exp.tex) ] |
-| Membrane Transport| [ [MT](https://github.com/BenSt099/LaTeX-Templates/blob/main/Membrane-Transport/MTrans.tex) ] |
-| Gene Regulation | [ [GE](https://github.com/BenSt099/LaTeX-Templates/blob/main/Gene-Regulation/Gene-Regulation.tex) ] |
-| Bootstrap Colors | [ [BC](https://github.com/BenSt099/LaTeX-Templates/blob/main/Bootstrap-Colors/bootstrapcolors.sty) ] |
-| Logical Gates | [ [LG](https://github.com/BenSt099/LaTeX-Templates/blob/main/LogicGates/Gates.tex) ] |
-| Entity-Relationship-Diagrams | [ [ER](https://github.com/BenSt099/LaTeX-Templates/blob/main/Entity-Relationship-Diag/erdiagrams.tex) ] |
-| Color-Gradients | [ [CG](https://github.com/BenSt099/LaTeX-Templates/blob/main/Color-Gradients/cgradients.tex) ] |
+<div align="center">
+<table width="100%" margin-left="auto" margin-right="auto">
+	<tr>
+		<th>Red-Black-Trees</th>
+		<th>Sorting-Algorithm</th>
+		<th>ER-Diagram</th>
+	</tr>
+	<tr>
+		<td width="33%">
+			<img src="img/rbtrees.png" 
+				alt="Red-Black-Trees Exp" />
+		</td>
+		<td width="33%">
+			<img src="img/sortalg.png" 
+				alt="Sorting Algorithm Exp" />
+		</td>
+		<td width="33%">
+			<img src="img/erdiagram.png" 
+				alt="ER-Diagram Exp" />
+		</td>
+	</tr>
+</table>
+
+<table width="100%" margin-left="auto" margin-right="auto">
+	<tr>
+		<th>MTrans</th>
+		<th>Shortest-Path-Graph</th>
+		<th>Queue</th>
+	</tr>
+	<tr>
+		<td width="33%">
+			<img src="img/mtrans.png" 
+				alt="MTrans Exp" />
+		</td>
+		<td width="33%">
+			<img src="img/spgraph.png" 
+				alt="Shortest-Path-Graph Exp" />
+		</td>
+		<td width="33%">
+			<img src="img/queue.png" 
+				alt="Queue Exp" />
+		</td>
+	</tr>
+</table>
+</div>
+
+
+
+
+
+
+
 
 ## License
 
