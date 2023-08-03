@@ -1,9 +1,12 @@
-<div align="center">
+<div style="text-align: center; margin-bottom: 70px">
+	<p align="center">![Static Badge](https://img.shields.io/badge/Lang-0f6846?logo=LaTeX)</p>
 	<h1>LaTeX-Templates</h1><br>
 	<div style="text-align: justify"><p>Latex has a lot of features to make your project beautiful. This repo provides some examples from various topics.</p></div>
 </div>
 
-## Examples
+<div style="text-align: center;">
+<h2>Examples</h2>
+</div>
 
 <div align="center">
 <table width="100%" margin-left="auto" margin-right="auto">
@@ -51,13 +54,8 @@
 </table>
 </div>
 
-
-
-
-
-
-
-
-## License
+<div style="text-align: center;">
+<h2>License</h2>
+</div>
 
 This project is licensed under GPL-3.0 license. For more information, checkout [License](https://github.com/BenSt099/LaTeX-Templates/blob/main/LICENSE).
