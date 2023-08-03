@@ -4,7 +4,7 @@
 	<div align="center"><p>Latex has a lot of features to make your project beautiful. This repo provides some examples from various topics.</p></div>
 </div>
 
-<div style="text-align: center">
+<div align="center">
 <h2>Examples</h2>
 </div>
 
@@ -54,7 +54,7 @@
 </table>
 </div>
 
-<div style="text-align: center;">
+<div align="center">
 <h2>License</h2>
 </div>
 
