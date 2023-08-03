@@ -1,0 +1,47 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{blindtext} % some example text
+
+\renewcommand*\contentsname{Summary} % Change name of toc: Contents -> Summary
+
+\usepackage{color}
+
+\definecolor{lightblue}{RGB}{38, 33, 138}
+
+\usepackage{setspace} % add more space in toc
+
+\usepackage{hyperref} % should be last package in import
+%https://www.overleaf.com/learn/latex/Hyperlinks
+\hypersetup{ % changing color of links
+    colorlinks = true,
+    linkcolor = lightblue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={TOC - Example},
+    pdfpagemode=FullScreen,
+}
+
+\begin{document}
+
+\doublespacing
+\tableofcontents
+\singlespacing
+
+\section{First Section}
+
+\subsection{First Subsection}
+
+\blindtext
+
+\addcontentsline{toc}{section}{Unnumbered Section}
+
+\section*{Unnumbered Section}
+
+\section{Second Section}
+
+\pagebreak
+
+\section{Third Section}
+
+
+\end{document}
