@@ -1,7 +1,7 @@
 <div style="text-align: center; margin-bottom: 70px">
-	<p align="center">![Static Badge](https://img.shields.io/badge/Lang-0f6846?logo=LaTeX)</p>
 	<h1>LaTeX-Templates</h1><br>
-	<div style="text-align: justify"><p>Latex has a lot of features to make your project beautiful. This repo provides some examples from various topics.</p></div>
+	<img alt="Static Badge" src="https://img.shields.io/badge/Lang-0f6846?logo=LaTeX">
+	<div><p>Latex has a lot of features to make your project beautiful. This repo provides some examples from various topics.</p></div>
 </div>
 
 <div style="text-align: center;">
