@@ -1,10 +1,10 @@
-<div style="text-align: center; margin-bottom: 70px">
+<div align="center" style="margin-bottom: 70px">
 	<h1>LaTeX-Templates</h1><br>
 	<img alt="Static Badge" src="https://img.shields.io/badge/Lang-0f6846?logo=LaTeX">
-	<div><p>Latex has a lot of features to make your project beautiful. This repo provides some examples from various topics.</p></div>
+	<div align="center"><p>Latex has a lot of features to make your project beautiful. This repo provides some examples from various topics.</p></div>
 </div>
 
-<div style="text-align: center;">
+<div style="text-align: center">
 <h2>Examples</h2>
 </div>
 
