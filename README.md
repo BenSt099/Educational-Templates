@@ -1,8 +1,7 @@
-# LaTeX-Templates
-
-## Description
-
-Latex has a lot of features to make your project beautiful. This repo provides some examples from various topics.
+<div align="center">
+	<h1>LaTeX-Templates</h1><br>
+	<div style="text-align: justify"><p>Latex has a lot of features to make your project beautiful. This repo provides some examples from various topics.</p></div>
+</div>
 
 ## Examples
 
