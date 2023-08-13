@@ -52,6 +52,28 @@
 		</td>
 	</tr>
 </table>
+
+<table width="100%" margin-left="auto" margin-right="auto">
+	<tr>
+		<th>Card</th>
+		<th>Clock</th>
+		<th>Circuits</th>
+	</tr>
+	<tr>
+		<td width="33%">
+			<img src="img/cardexp.png" 
+				alt="Card Exp" />
+		</td>
+		<td width="33%">
+			<img src="img/clock.png" 
+				alt="Clock Exp" />
+		</td>
+		<td width="33%">
+			<img src="img/circuits.png" 
+				alt="Circuits Exp" />
+		</td>
+	</tr>
+</table>
 </div>
 
 <div align="center">
