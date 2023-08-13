@@ -80,4 +80,4 @@
 <h2>License</h2>
 </div>
 
-This project is licensed under GPL-3.0 license. For more information, checkout [License](https://github.com/BenSt099/LaTeX-Templates/blob/main/LICENSE).
+<div align="center"><p>This project is licensed under GPL-3.0 license. For more information, checkout <a href="https://github.com/BenSt099/LaTeX-Templates/blob/main/LICENSE">License</a></p></div>
