@@ -78,14 +78,15 @@
                 fill=middleblue,
                 rounded corners=1mm,
                 minimum height=5mm,
-                minimum width=20mm},
-            address/.style = {text=black}]
+                minimum width=20mm}]
             \matrix [column sep=0.1cm, row sep=0.01cm]{
-            \node[opacity=0] (sp) {}; & \node[address] (999) {$0x2218$}; & \node[selected] {$c$};  \\ 
-                                    & \node[address] {$0x2214$}; & \node[element] {$b$};  \\ 
-                                    & \node[address] {$0x2210$}; & \node[element] {$a$};  \\ 
+            \node[opacity=0] (sp) {}; & \node (999) {$0x2218$}; & \node[selected] {$c$};  \\ 
+                                    & \node {$0x2214$}; & \node[element] {$b$};  \\ 
+                                    & \node (A) {$0x2210$}; & \node[element] (B) {$a$};  \\ 
             };
             \draw[-{Stealth[length=3mm]}] (sp) -- (999);
+            \draw (-8,-4.6) -- (10,-4.6);
+            
         \end{tikzpicture}
     \end{center}
 
