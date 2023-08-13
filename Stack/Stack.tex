@@ -15,6 +15,7 @@
 \usepackage{tikz}
 \usepackage{tkz-graph}
 \usetikzlibrary{trees}
+\usetikzlibrary{arrows.meta} 
 
 \definecolor{lightblue}{RGB}{124, 214, 235}
 \definecolor{middleblue}{RGB}{38, 150, 201}
@@ -56,6 +57,35 @@
 
         \node[draw=white, text=white, fill=middleblue,rounded corners=1.5mm,minimum size=1em,label=right:Top Element] (A) at (0,-13) {}; % Distance between nodes: 3
         \node[draw=white, text=white, fill=lightblue,rounded corners=1.5mm,minimum size=1em,label=right:Element in Stack] (A) at (0,-16) {};
+        \end{tikzpicture}
+    \end{center}
+
+    \vspace*{10mm}
+
+    \begin{center}
+        \begin{tikzpicture}[thick, scale=0.2,
+            element/.style = {
+                draw=white, 
+                text=black, 
+                fill=lightblue,
+                rounded corners=1mm,
+                minimum height=5mm,
+                minimum width=20mm,
+                }, 
+            selected/.style = {
+                draw=white, 
+                text=white, 
+                fill=middleblue,
+                rounded corners=1mm,
+                minimum height=5mm,
+                minimum width=20mm},
+            address/.style = {text=black}]
+            \matrix [column sep=0.1cm, row sep=0.01cm]{
+            \node[opacity=0] (sp) {}; & \node[address] (999) {$0x2218$}; & \node[selected] {$c$};  \\ 
+                                    & \node[address] {$0x2214$}; & \node[element] {$b$};  \\ 
+                                    & \node[address] {$0x2210$}; & \node[element] {$a$};  \\ 
+            };
+            \draw[-{Stealth[length=3mm]}] (sp) -- (999);
         \end{tikzpicture}
     \end{center}
 
