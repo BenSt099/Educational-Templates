@@ -1,0 +1,52 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%        Package that provides a Container (Bootstrap's Card Container)    %%%
+%%%         Link: https://getbootstrap.com/docs/5.3/components/card/         %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+%
+%
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{bootstrapcards}[2023/08/13 Bootstrapcards]
+
+\RequirePackage[most]{tcolorbox}
+\RequirePackage{bootstrapcolors}
+\RequirePackage{tikz}
+\RequirePackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=white,
+    filecolor=magenta,      
+    urlcolor=white,
+}
+
+
+\newenvironment{card}[4]
+    {
+        \begin{center}
+        \begin{tcolorbox}[
+            title filled=false,
+            boxrule=0.5pt,
+            width=7cm,
+            colback=white,
+            colframe=gray-500]
+        {\large \textbf{#1}} \newline
+        \begin{flushleft}
+            #2
+        \end{flushleft} \vspace*{5mm}
+
+        \begin{tikzpicture}
+            \node[draw=white, 
+            text=white, 
+            fill=primary,
+            rounded corners=1.5mm,
+            minimum height=9mm,
+            minimum width=35mm] { \href{#3}{#4}};
+        \end{tikzpicture}
+    }
+    {
+        \end{tcolorbox}
+        \end{center}
+    }
