@@ -23,7 +23,7 @@
 }
 
 
-\newenvironment{card}[4]
+\newenvironment{card}[5]
     {
         \begin{center}
         \begin{tcolorbox}[
@@ -32,9 +32,13 @@
             width=7cm,
             colback=white,
             colframe=gray-500]
-        {\large \textbf{#1}} \newline
+        \begin{center}
+            \includegraphics[width=5cm]{#1}
+        \end{center}
+
+        {\large \textbf{#2}} \vspace*{4mm}
         \begin{flushleft}
-            #2
+            #3
         \end{flushleft} \vspace*{5mm}
 
         \begin{tikzpicture}
@@ -43,7 +47,7 @@
             fill=primary,
             rounded corners=1.5mm,
             minimum height=9mm,
-            minimum width=35mm] { \href{#3}{#4}};
+            minimum width=35mm] { \href{#4}{#5}};
         \end{tikzpicture}
     }
     {
