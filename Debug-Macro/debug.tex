@@ -3,16 +3,16 @@
 \usepackage{todonotes}
 
 % if you want to disable the todos, simply comment out the line below
-\newcommand{\Debug}{}
+\newcommand{\debug}{}
 
+\newcommand{\todomacro}[1]{
+    \ifdefined\debug
+    \todo{#1}
+    \fi
+}
 
 \begin{document}
 
-A small example.
-\ifdefined\Debug
-    \todo{A Todo}
-\else
-
-\fi
+A small example.\todomacro{A Todo}
 
 \end{document}
