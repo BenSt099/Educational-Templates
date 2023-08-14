@@ -24,7 +24,7 @@
 }
 
 
-\newenvironment{card}[6]
+\newenvironment{card}[7]
     {
         \begin{center}
         \begin{tcolorbox}[
@@ -37,21 +37,21 @@
             \ifthenelse{\equal{#1}{false}}{}{\includegraphics[width=5cm]{#1}} 
         \end{center}
 
-        {\large \textbf{#2}}
+        \ifthenelse{\equal{#2}{false}}{}{{\large \textbf{#2}}} 
 
-        {\small \color{gray-600} \textbf{#3}} \vspace*{2mm}
-        \begin{flushleft}
+        \ifthenelse{\equal{#3}{false}}{}{{\small \color{gray-600} \textbf{#3}} \vspace*{2mm}}
+        \ifthenelse{\equal{#4}{false}}{}{\begin{flushleft}
             #4
-        \end{flushleft} \vspace*{5mm}
-
-        \begin{tikzpicture}
+        \end{flushleft} \vspace*{5mm}}
+        
+        \ifthenelse{\equal{#5}{false}\or\equal{#6}{false}\or\equal{#7}{false}}{}{\begin{tikzpicture}
             \node[draw=white, 
             text=white, 
-            fill=primary,
+            fill=#7,
             rounded corners=1.5mm,
             minimum height=9mm,
             minimum width=35mm] { \href{#5}{#6}};
-        \end{tikzpicture}
+        \end{tikzpicture}}
     }
     {
         \end{tcolorbox}
