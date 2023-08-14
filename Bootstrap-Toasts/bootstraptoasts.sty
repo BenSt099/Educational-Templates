@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%        Package that provides push notifications (Bootstrap's Toasts)     %%%
-%%%          Link: https://getbootstrap.com/docs/5.3/components/toasts/      %%%
+%%%         Link: https://getbootstrap.com/docs/5.3/components/toasts/       %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -14,7 +14,6 @@
 \RequirePackage[most]{tcolorbox}
 \RequirePackage{bootstrapcolors}
 \RequirePackage{ifthen}
-\RequirePackage{fontawesome}
 \RequirePackage{tikz}
 \RequirePackage{hyperref}
 \hypersetup{
@@ -30,17 +29,18 @@
         \begin{tcolorbox}[
             title filled=true,
             boxrule=0.5pt,
-            width=9cm,
+            width=11cm,
             colbacktitle=white,
             coltitle=gray-700,
             colback=white,
             colframe=gray-500,
-            title=\ifthenelse{\equal{#1}{false}}{}{\ifthenelse{\equal{#1}{pic}}{\includegraphics[width=1cm]{#1}}{\begin{tikzpicture}\node[draw=white, 
-                text=white,fill=#1,rounded corners=1mm,minimum height=2mm,minimum width=2mm] {};\end{tikzpicture}}}
+            title=\vspace*{2mm}
+            \ifthenelse{\equal{#1}{false}}{}{\ifthenelse{\equal{#1}{pic}}{\includegraphics[width=1cm]{#1}}{\begin{tikzpicture}\node[draw=white, 
+                text=white,fill=#1,rounded corners=2mm,minimum height=5mm,minimum width=5mm] {};\end{tikzpicture}}}
             \ifthenelse{\equal{#2}{false}}{}{{\large \textbf{#2}}} 
                 \hfill
-                \ifthenelse{\equal{#3}{false}}{}{{\small \color{gray-600} #3}}
-                {\Large \color{gray-500} \faClose}]
+                \ifthenelse{\equal{#3}{false}}{}{{\small \color{gray-600} #3}} \hspace*{1mm}
+                {\LARGE \color{gray-600} \textbf{$\times$}}\vspace*{2mm}]
         \ifthenelse{\equal{#4}{false}}{}{\begin{flushleft}
             #4
         \end{flushleft}}
