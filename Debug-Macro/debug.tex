@@ -1,0 +1,18 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage{todonotes}
+
+% if you want to disable the todos, simply comment out the line below
+\newcommand{\Debug}{}
+
+
+\begin{document}
+
+A small example.
+\ifdefined\Debug
+    \todo{A Todo}
+\else
+
+\fi
+
+\end{document}
