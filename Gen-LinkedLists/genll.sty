@@ -3,18 +3,19 @@
 
 \RequirePackage{tikz}
 \usetikzlibrary{arrows.meta} 
+\usetikzlibrary{positioning}
 \RequirePackage{xparse}
 \RequirePackage{ifthen}
 \RequirePackage{bootstrapcolors}
 
 \newcounter{numNodes}
-\newcounter{cc}
 \newcounter{aa}
+\newcounter{hh}
 
 \NewDocumentEnvironment{linkedlist}{m}{
     \setcounter{numNodes}{1}
-    \setcounter{cc}{2}
     \setcounter{aa}{1}
+    \setcounter{hh}{0}
     \begin{tikzpicture}[main/.style={
         draw=white, 
         text=white, 
@@ -28,15 +29,14 @@
             minimum size=2em
         }]
 
-        \node[special] (0) at (0,0) {head};
+        \node[special] (0) {head};
 
         \foreach \i in {#1}{
-            \node[main] (\thenumNodes) at (\thecc,0) {$\i$};
+            \node[main, right=of \thehh] (\thenumNodes) {$\i$};
             \stepcounter{numNodes}
-            \stepcounter{cc}
-            \stepcounter{cc}
+            \stepcounter{hh}
         }
-        \node[special] (\thenumNodes) at (\thecc,0) {tail};
+        \node[special, right=of \thehh] (\thenumNodes) {tail};
         
         \foreach \i in {0,...,\thenumNodes}{
             \ifthenelse{\theaa < \thenumNodes \OR{\theaa = \thenumNodes}}{
