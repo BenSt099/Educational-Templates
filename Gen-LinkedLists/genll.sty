@@ -12,19 +12,19 @@
 \newcounter{aa}
 \newcounter{hh}
 
-\NewDocumentEnvironment{linkedlist}{m}{
+\NewDocumentEnvironment{linkedlist}{mmm}{
     \setcounter{numNodes}{1}
     \setcounter{aa}{1}
     \setcounter{hh}{0}
     \begin{tikzpicture}[main/.style={
         draw=white, 
         text=white, 
-        fill=teal-500,
+        fill=#2,
         rounded corners=2mm,
         minimum size=2em}, special/.style={
             draw=white, 
             text=white, 
-            fill=teal-700,
+            fill=#3,
             rounded corners=2mm,
             minimum size=2em
         }]
@@ -40,7 +40,7 @@
         
         \foreach \i in {0,...,\thenumNodes}{
             \ifthenelse{\theaa < \thenumNodes \OR{\theaa = \thenumNodes}}{
-                \draw [line width=0.5mm,teal-700, -{Stealth[length=3mm, open, fill=none,color=teal-700]}](\i) -- (\theaa);
+                \draw [line width=0.5mm,#3, -{Stealth[length=3mm, open, fill=none,color=#3]}](\i) -- (\theaa);
                 \stepcounter{aa}
             }{}
         }
