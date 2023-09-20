@@ -77,6 +77,11 @@
 </div>
 
 <div align="center">
+<h2>Highlights</h2>
+<div align="center"><p>The two projects <b>Stack-2</b> and <b>Gen-LinkedLists</b> make it super easy to generate a linked list or a stack just by passing some arguments to a new environment. These new environments will generate a beautiful designed structure automatically for you.</p></div>
+</div>
+
+<div align="center">
 <h2>License</h2>
 </div>
 
