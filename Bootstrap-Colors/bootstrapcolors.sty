@@ -1,6 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%    Package that provides a range of colors (Bootstrap's color palette)   %%%
+%%% and 8 colors that make your project easier to see for color blind people %%%
 %%%         Link: https://getbootstrap.com/docs/5.3/customize/color/         %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -10,6 +11,16 @@
 %
 \ProvidesPackage{bootstrapcolors}[LaTeX Color Extension Package]
 \RequirePackage{xcolor}
+
+% Color palette for color blind people - color blind friendly
+\definecolor{cbf-black}{HTML}{000000}  
+\definecolor{cbf-orange}{HTML}{E69F00}  
+\definecolor{cbf-lightblue}{HTML}{56B4E9}  
+\definecolor{cbf-green}{HTML}{009E73}  
+\definecolor{cbf-yellow}{HTML}{F0E442}  
+\definecolor{cbf-darkblue}{HTML}{0072B2}  
+\definecolor{cbf-red}{HTML}{D55E00}  
+\definecolor{cbf-pink}{HTML}{CC79A7}  
 
 % Theme Colors
 \definecolor{primary}{HTML}{0d6efd}  
