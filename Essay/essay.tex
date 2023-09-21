@@ -1,0 +1,36 @@
+\documentclass{article}
+
+% Based upon:
+% https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions
+% https://www.andy-roberts.net/latex/floats_figures_captions/
+% https://github.com/deedy/Latex-Templates/blob/master/Article-Journal/JournalArticle/article_2.tex
+
+\usepackage{bootstrapcolors}
+
+\usepackage[english]{babel}
+\usepackage{multicol}
+
+\usepackage{erewhon}
+\usepackage{lipsum}
+\usepackage{lettrine}
+\usepackage{GoudyIn}
+
+%\usepackage[x11names]{xcolor} 
+\renewcommand{\LettrineFontHook}{\color{pink-700}\GoudyInfamily{}}
+%\LettrineTextFont{\itshape} %VioletRed4
+%\setcounter{DefaultLines}{3}
+
+\begin{document}
+
+    \begin{multicols}{2}
+        \section{First Section}
+        
+        \lettrine[nindent=0em,lines=3]{L} orem ipsum dolor sit amet, consectetur adipiscing elit.
+        \lipsum[2-3]
+
+        \section{Second Section}
+        \lettrine[nindent=0em,lines=3]{\color{red-600}B} ello ipsum dolor sit amet, consectetur adipiscing elit.
+        \lipsum[4]
+    \end{multicols}{2}
+    
+\end{document}
