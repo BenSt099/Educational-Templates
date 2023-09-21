@@ -15,21 +15,18 @@
 \usepackage{lettrine}
 \usepackage{GoudyIn}
 
-%\usepackage[x11names]{xcolor} 
 \renewcommand{\LettrineFontHook}{\color{pink-700}\GoudyInfamily{}}
-%\LettrineTextFont{\itshape} %VioletRed4
-%\setcounter{DefaultLines}{3}
 
 \begin{document}
 
     \begin{multicols}{2}
-        \section{First Section}
-        
-        \lettrine[nindent=0em,lines=3]{L} orem ipsum dolor sit amet, consectetur adipiscing elit.
+        \section{First Section}        
+        \lettrine[nindent=0em,findent=0.5em,lines=3]{L} orem ipsum dolor sit amet, consectetur adipiscing elit.
         \lipsum[2-3]
 
         \section{Second Section}
-        \lettrine[nindent=0em,lines=3]{\color{red-600}B} ello ipsum dolor sit amet, consectetur adipiscing elit.
+        \lettrine[nindent=1em,lines=3]{\color{red-600}B} ello ipsum dolor sit amet, consectetur adipiscing elit.
+        % Set 'nindent=1em' to 'nindent=0em' and insert 'findent=0.5em' for aligning the text like in the first example.
         \lipsum[4]
     \end{multicols}{2}
     
