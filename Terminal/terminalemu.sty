@@ -13,22 +13,45 @@
 \RequirePackage[most]{tcolorbox}
 \RequirePackage{bootstrapcolors}
 \RequirePackage{ifthen}
+\newcounter{counter}
 
-\newenvironment{terminal}[2]
-    {
-        \begin{tcolorbox}[
-            center title, 
-            title filled=true,
-            boxrule=0.5pt,
-            width=11cm,
-            colbacktitle=gray-700,
-            coltitle=gray-300,
-            colback=purple-700,
-            colframe=gray-700,
-            arc=1mm,
-            boxrule=2pt,
-            title=#1]
-    }
-    {
-        \end{tcolorbox}
-    }
+\newenvironment{terminal}[6]{
+
+    \setcounter{counter}{1}
+    \begin{tcolorbox}[
+        center title, 
+        title filled=true,
+        boxrule=0.5pt,
+        width=11cm,
+        colbacktitle=gray-700,
+        coltitle=gray-300,
+        colback=purple-700,
+        colframe=gray-700,
+        arc=1mm,
+        boxrule=2pt,
+        title=#1]
+
+        \def\firstpart{a}
+        \def\secondpart{b}
+    \foreach \i in {#6}{
+        \ifthenelse{\thecounter = 1}{
+            \textcolor{#3}{\i #2}
+            \stepcounter{counter}
+        }{
+            \ifthenelse{\thecounter = 2}{
+            \hspace*{-4mm}\textcolor{#4}{\i}
+            \stepcounter{counter}
+            }{
+                \ifthenelse{\thecounter = 3}{
+
+                    \textcolor{#5}{\i}
+
+                    \addtocounter{counter}{-2}
+                }{}
+            }
+        }
+    }    
+}
+{
+    \end{tcolorbox}
+}
