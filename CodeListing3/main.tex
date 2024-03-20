@@ -1,0 +1,42 @@
+\documentclass{article}
+
+\usepackage{bootstrapcolors}
+\usepackage{listings}
+\usepackage{color}
+
+\lstset{ 
+  backgroundcolor=\color{blue-100},   
+  numbers=left,                    
+  numbersep=5pt,                  
+  numberstyle=\small\color{blue}, 
+  language=Python,
+  title=\lstname,                   
+  caption={Descriptive Caption Text},
+  frame=tb,
+  lineskip=2pt,
+  firstnumber=0
+}
+\makeatletter % https://tex.stackexchange.com/
+\def\lst@PlaceNumber{\ifnum\value{lstnumber}=0\else
+  \llap{\normalfont\lst@numberstyle{\thelstnumber}\kern\lst@numbersep}\fi}
+\makeatother
+
+\begin{document}
+
+\begin{lstlisting}
+ BREADTH-FIRST-SEARCH:
+    Color all vertices white
+    Put initial vertex s in Queue Q
+    Color s gray
+    While Q not empty:
+        Delete first vertex v from Q
+        Color all neighbours of v gray and put them in Q
+        Color v black
+\end{lstlisting}
+
+\lstset{firstnumber=1}
+
+\lstinputlisting[language=Python, caption=Python Example]{abcd.py}
+
+
+\end{document}
