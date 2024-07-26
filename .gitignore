@@ -3,7 +3,13 @@
 ideas/
 Generate-RBTree/
 Logo/
-*.pdf
+Terminal/
+Text-Alignment/
+Titlepage/
+Essay/
+Clock/
+Color-Gradients/
+LogicGates/
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
