@@ -8,8 +8,13 @@ Text-Alignment/
 Titlepage/
 Essay/
 Clock/
+Queue/
+InfoBox/
+Sorting-Algorithm/
 Color-Gradients/
 LogicGates/
+Entity-Relationship-Diag/
+Table-Of-Contents/
 
 ## Core latex/pdflatex auxiliary files:
 *.aux

@@ -1,6 +1,5 @@
 <div align="center" style="margin-bottom: 70px">
 	<h1>Educational Templates</h1><br>
-	<img alt="Static Badge" src="https://img.shields.io/badge/Lang-0f6846?logo=LaTeX">
 	<div align="center"><p>This repository contains educational material made with Latex, LibreOffice Draw and other methods.</p></div>
 	<div align="center"><p>! This repository is currently under construction.</p></div>
 </div>
