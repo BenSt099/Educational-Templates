@@ -1,0 +1,115 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{ggg}[2023/08/15 Generate-LinkedLists]
+
+\RequirePackage{tikz}
+\usetikzlibrary{arrows.meta} 
+\usetikzlibrary{positioning}
+\RequirePackage{xparse}
+\RequirePackage{ifthen}
+\RequirePackage{bootstrapcolors}
+
+%\DeclareOption*{\PackageWarning{ggg}{This package has no option ‘\CurrentOption’}}
+
+\newcounter{numNodes}
+\newcounter{aa}
+\newcounter{hh}
+
+\newcounter{maxnodes}
+\newcounter{numberOfNodes}
+\newcounter{pointer}
+\newcounter{predecessor}
+\newcounter{counter}
+
+\newenvironment{linkedlist}[4]{
+    \setcounter{numNodes}{1}
+    \setcounter{aa}{1}
+    \setcounter{hh}{0}
+
+    \setcounter{maxnodes}{#2}
+    \setcounter{numberOfNodes}{1}
+    \setcounter{pointer}{1}
+    \setcounter{predecessor}{0}
+    \setcounter{counter}{0}
+    
+    \begin{tikzpicture}[main/.style={
+        draw=white, 
+        text=white, 
+        fill=#3,
+        rounded corners=2mm,
+        minimum size=2em}, special/.style={
+            draw=white, 
+            text=white, 
+            fill=#4,
+            rounded corners=2mm,
+            minimum size=2em
+        }]
+
+        \node[special] (0) {head};
+
+        \ifthenelse{#2 = 0 \OR{#2 > 0}}{
+            % #2 = 0
+            \ifthenelse{#2 = 0}{
+                \foreach \i in {#1}{
+                    \node[main, right=of \thehh] (\thenumNodes) {$\i$};
+                    \stepcounter{numNodes}
+                    \stepcounter{hh}
+                }
+                \node[special, right=of \thehh] (\thenumNodes) {tail};
+                
+                \foreach \i in {0,...,\thenumNodes}{
+                    \ifthenelse{\theaa < \thenumNodes \OR{\theaa = \thenumNodes}}{
+                        \draw [line width=0.5mm,#3, -{Stealth[length=3mm, open, fill=none,color=#3]}](\i) -- (\theaa);
+                        \stepcounter{aa}
+                    }{}
+                }
+
+            }{
+                % #2 > 0
+                \foreach \i in {#1}{
+                    \ifthenelse{\thecounter < \themaxnodes}{
+                        \node[main, right=of \thepredecessor] (\thenumberOfNodes) {$\i$};
+                        \draw [line width=0.5mm,#4, -{Stealth[length=3mm, open, fill=none,color=#4]}](\thepredecessor) -- (\thenumberOfNodes);
+                        \stepcounter{predecessor}
+                        \stepcounter{numberOfNodes}
+                        \stepcounter{counter}
+                    }{
+                        % new line
+                        \node[main, below=of \thepointer] (\thenumberOfNodes) {$\i$};
+                        \setcounter{pointer}{\thenumberOfNodes}
+                        \stepcounter{numberOfNodes}
+                        \stepcounter{predecessor}
+                        \setcounter{counter}{1}
+                    }  
+                }
+    
+                \ifthenelse{\thecounter < \themaxnodes \OR{\thecounter = \themaxnodes}}{
+                    \node[special, right=of \thepredecessor] (\thenumberOfNodes) {tail};
+                    \draw [line width=0.5mm,#4, -{Stealth[length=3mm, open, fill=none,color=#4]}](\thepredecessor) -- (\thenumberOfNodes);
+                }{
+                    \node[special, below=of \thepointer] (\thenumberOfNodes) {tail};
+                }
+            }
+            
+
+           
+
+            % Edges
+            %\foreach \i in {0,...,\thenumNodes}{
+            %    \ifthenelse{\theaa < \thenumNodes \OR{\theaa = \thenumNodes}}{
+            %        \draw [line width=0.5mm,#4, -{Stealth[length=3mm, open, fill=none,color=#4]}](\i) -- (\theaa);
+            %        \stepcounter{aa}
+            %    }{
+            %        \draw [line width=0.5mm,#4, color=#4, dashed, length=4mm](\i) -- (\theaa);
+            %        \stepcounter{aa}
+            %    }
+            %}
+            
+
+
+        }{
+            \PackageError{gendatastructs}{Second arg not a positive integer.}{Change second argument to integer that is >= zero.}
+        }
+    }
+{
+    \end{tikzpicture}    
+}

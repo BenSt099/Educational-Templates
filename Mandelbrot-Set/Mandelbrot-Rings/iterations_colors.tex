@@ -1,0 +1,32 @@
+\documentclass{standalone}
+\usepackage{xcolor}
+\definecolor{color1}{RGB}{15, 120, 89}
+\definecolor{color2}{RGB}{65, 200, 255}
+\definecolor{color3}{RGB}{183, 23, 97}
+\definecolor{color4}{RGB}{45, 122, 240}
+\definecolor{color5}{RGB}{110, 187, 233}
+\definecolor{color6}{RGB}{232, 67, 11}
+\definecolor{color7}{RGB}{201, 139, 45}
+\definecolor{color8}{RGB}{0, 255, 114}
+\usepackage{makecell}
+\usepackage{array}
+\usepackage{colortbl}
+\begin{document}
+\renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{lr}
+        \hline
+        Color & \makecell{Number of\\ Iterations} \\ 
+        \hline
+        \cellcolor{color1} & 0 \\
+        \cellcolor{color2} & 1 \\
+        \cellcolor{color3} & 2 \\
+        \cellcolor{color4} & 3 \\
+        \cellcolor{color5} & 4 \\
+        \cellcolor{color6} & 5 \\
+        \cellcolor{color7} & 6 \\
+        \cellcolor{color8} & 7 \\
+        \ldots & \ldots \\ 
+        \cellcolor{black} & $\geq$ 40 \\
+        \hline
+    \end{tabular}
+\end{document}

@@ -1,7 +1,8 @@
 <div align="center" style="margin-bottom: 70px">
-	<h1>LaTeX-Templates</h1><br>
+	<h1>Educational Templates</h1><br>
 	<img alt="Static Badge" src="https://img.shields.io/badge/Lang-0f6846?logo=LaTeX">
-	<div align="center"><p>Latex has a lot of features to make your project beautiful. This repo provides some examples from various topics.</p></div>
+	<div align="center"><p>This repository contains educational material made with Latex, LibreOffice Draw and other methods.</p></div>
+	<div align="center"><p>! This repository is currently under construction.</p></div>
 </div>
 
 <div align="center">
@@ -76,6 +77,7 @@
 </table>
 </div>
 
+<!--
 <div align="center">
 <h2>Highlights</h2>
 <div align="center"><p>Take a look at some highlights that you may not see in other projects.</p></div>
@@ -84,6 +86,7 @@
 <li>The two projects <b>Stack-2</b> and <b>Gen-LinkedLists</b> provide an easy interface for generating a stack or a linked list. Just import the packages, create a new environment, pass some arguments and these structures will be automatically generated for you.</li>
 <li>Are you familiar with <a href="https://getbootstrap.com/">Bootstrap</a>? There are some nice implementations from Bootstrap's color system, Bootstrap's card container and Bootstrap's push notifications (toasts).</li>
 </ul>
+
 
 <div align="center">
 <h2>Links</h2>
@@ -95,7 +98,7 @@
 <li><a href="https://tikz.dev/">PGF/Tikz Manual</a></li>
 <li><a href="https://detexify.kirelabs.org/classify.html">Detexify</a></li>
 </ul>
-
+-->
 
 <div align="center">
 <h2>License</h2>
