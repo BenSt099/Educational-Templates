@@ -9,7 +9,7 @@ import multiprocessing
 
 def calculate_mandelbrot_set(frames):
     zoom = 0.01
-    max_iterations = 4000
+    max_iterations = 700
     coord_re = -0.738
     coord_im = 0.24
     re_min = coord_re - zoom
@@ -21,9 +21,8 @@ def calculate_mandelbrot_set(frames):
         re_max += zoom
         im_min -= zoom
         im_max += zoom
-        max_iterations = max_iterations + 100
         zoom = zoom + 0.01
-    im = Image.effect_mandelbrot((800, 800), (re_min, im_min, re_max, im_max), max_iterations)
+    im = Image.effect_mandelbrot((800,800), (re_min, im_min, re_max, im_max), max_iterations)
     enhancer = ImageEnhance.Brightness(im)
     im2 = enhancer.enhance(1.28)
     return np.rot90(np.array(im2), -1), frames
