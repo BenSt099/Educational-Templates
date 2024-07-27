@@ -1,0 +1,135 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                  Package that generates a stack with tikz                %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+% ARG 1 - REQUIRED: Number of elements on the stack
+% ARG 2 - REQUIRED: Elements on the stack
+% ARG 3 -         : Adresses of the stack (if you don't want to supply adresses, set this arg to 'false')
+% ARG 4 - REQUIRED: Color of elements on the stack
+% ARG 5 -         : Color of element that is TOP OF STACK (if you don't want a different color for the top element, set this arg to 'false')
+% ARG 6 -         : Arrow that points to TOP OF STACK (arg = left | right | false (no arrow))
+% ARG 7 - REQUIRED: Direction in which the stack grows (up = false, down = true)
+%
+% ATTENTION: If an arg is not REQUIRED, set it to false.
+%
+%
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{genstacks}[2024/07/27 genstacks]
+
+\RequirePackage{bootstrapcolors}
+\RequirePackage{ifthen}
+\RequirePackage{tikz}
+\usetikzlibrary{arrows.meta}
+\newcounter{xpos}
+\newcounter{ypos}
+\newcounter{elements}
+\newcounter{adresses}
+\newcounter{numberofelements}
+
+\newenvironment{stack}[7] 
+    {
+        \setcounter{xpos}{1}
+        \setcounter{ypos}{-12}
+        \setcounter{elements}{1}
+        \setcounter{adresses}{1}
+        \setcounter{numberofelements}{#1}
+        \begin{tikzpicture}[thick, scale=0.2,
+            element/.style = {
+                draw=white, 
+                text=black, 
+                fill=#4,
+                rounded corners=1mm,
+                minimum height=5mm,
+                minimum width=20mm,
+            }]
+
+            \ifthenelse{\equal{#7}{false}}
+            { % place up
+                \foreach \i in {#2}{
+                    \ifthenelse{\theelements = \thenumberofelements}{
+                        \ifthenelse{\equal{#5}{false}}
+                        {\node[element] at (0,\thexpos) (\theelements) {$\i$}; \\}
+                        {\node[element, fill=#5] at (0,\thexpos) (\theelements) {$\i$}; \\}
+                    }{
+                        \node[element] at (0,\thexpos) (\theelements) {$\i$}; \\
+                        \addtocounter{xpos}{3}
+                        \stepcounter{elements}
+                    }
+                }
+                \setcounter{xpos}{1}
+
+                    \ifthenelse{\equal{#3}{false}}
+                    {}
+                    {
+                        \foreach \j in {#3}{
+                            \node[] at (\theypos,\thexpos) (\theadresses) {$\j$}; \\
+                            \addtocounter{xpos}{3}
+                            \stepcounter{adresses}
+                        }
+                    }
+                \draw (-8,-1) -- (8,-1);
+
+                % Arrow
+                \ifthenelse{\equal{#6}{left}}
+                { % left
+                    \addtocounter{xpos}{-3}  
+                    \draw[-{Stealth[length=3mm]}]  (-9,\thexpos) --  (-6,\thexpos);
+                }
+                {
+                    \ifthenelse{\equal{#6}{right}} % right
+                    {
+                        \addtocounter{xpos}{-3}                    
+                        \draw[-{Stealth[length=3mm]}]  (9,\thexpos) --  (6,\thexpos);
+                    }
+                    { % false
+                    }
+                }
+            }
+            { % place down
+                \foreach \i in {#2}{
+                    \ifthenelse{\theelements = \thenumberofelements}{
+                        \ifthenelse{\equal{#5}{false}}
+                        {\node[element] at (0,\thexpos) (\theelements) {$\i$}; \\}
+                        {\node[element, fill=#5] at (0,\thexpos) (\theelements) {$\i$}; \\}
+                    }{
+                        \node[element] at (0,\thexpos) (\theelements) {$\i$}; \\
+                        \addtocounter{xpos}{-3}
+                        \stepcounter{elements}
+                    }
+                }
+                \setcounter{xpos}{1}
+
+                    \ifthenelse{\equal{#3}{false}}
+                    {}
+                    {
+                        \foreach \j in {#3}{
+                            \node[] at (\theypos,\thexpos) (\theadresses) {$\j$}; \\
+                            \addtocounter{xpos}{-3}
+                            \stepcounter{adresses}
+                        }
+                    }
+                \draw (-8,3) -- (8,3);
+
+                % Arrow
+                \ifthenelse{\equal{#6}{left}}
+                { % left
+                    \addtocounter{xpos}{3}  
+                    \draw[-{Stealth[length=3mm]}]  (-9,\thexpos) --  (-6,\thexpos);
+                }
+                {
+                    \ifthenelse{\equal{#6}{right}} % right
+                    {
+                        \addtocounter{xpos}{3}                    
+                        \draw[-{Stealth[length=3mm]}]  (9,\thexpos) --  (6,\thexpos);
+                    }
+                    { % false
+                    }
+                }
+            }
+    }
+    {
+        \end{tikzpicture}
+    }
