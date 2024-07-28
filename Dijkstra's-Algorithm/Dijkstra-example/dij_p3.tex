@@ -1,0 +1,8 @@
+\begin{tikzpicture}[thick, main/.style = {text=black,minimum size=1em}, scale=0.2,
+    selected/.style = {text=black, fill=green-300,rounded corners=0.7mm,minimum size=2em}]
+    \matrix[column sep=0.07cm, row sep=0.006cm]{
+         \node[main] (0) {$a$}; &  \node[main] (1) {$b$}; &  \node[main] (2) {$c$}; & \node[main] (3) {$d$}; & \node[main] (4) {$e$}; & \node[main] (5) {$f$}; & \node[main] (6) {$g$}; & \node[main] (7) {$h$};\\
+         
+         \node[selected] (8) {$null$}; &  \node[selected] (9) {$a$}; &  \node[selected] (10) {$null$}; & \node[selected] (11) {$null$}; & \node[selected] (12) {$null$}; & \node[selected] (13) {$null$}; & \node[selected] (14) {$null$}; & \node[selected] (15) {$null$};\\
+    };
+\end{tikzpicture}

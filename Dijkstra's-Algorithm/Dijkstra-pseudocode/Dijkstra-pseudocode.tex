@@ -1,0 +1,33 @@
+\documentclass[aspectratio=169]{beamer}
+
+\usepackage{bootstrapcolors}
+\usepackage{geometry}
+\geometry{papersize={15cm,6cm}}
+
+\setbeamertemplate{navigation symbols}{} 
+\setbeamertemplate{footline}{}          
+\setbeamertemplate{headline}{}           
+\setbeamertemplate{caption}{}            
+\setbeamertemplate{blocks}{}             
+
+\begin{document}
+\begin{frame}
+    \vspace{2mm}
+    \hrule
+    \begin{enumerate}
+         \item Until \colorbox{red-400}{$H$} is empty, do the following:
+              \begin{enumerate}
+                   \item Extract the minimum key from \colorbox{red-400}{$H$} and call it $u$.
+                   \item Add $u$ to \colorbox{indigo-300}{$S$}. It is now marked as \textit{processed}.
+                   \item For all neighbours $k$ of $u$, do the following:
+                        \begin{enumerate}
+                             \item If \colorbox{blue-300}{$d[u]$} $ + weight(u,k) < $ \colorbox{blue-300}{$d[k]$}, update \colorbox{blue-300}{$d[k]$} to the
+                             calculated distance. Set \colorbox{green-300}{$p[k]$} $ = u$.
+                             \item Otherwise, do nothing.
+                        \end{enumerate}
+              \end{enumerate}
+        \item To return a shortest path $(s,t)$ to the user, start at \colorbox{green-300}{$p[t]$} $ = r$, take the predecessor $r$ and compute \colorbox{green-300}{$p[r]$}. Repeat until you reach $s$.
+    \end{enumerate}
+    \hrule
+\end{frame}
+\end{document}

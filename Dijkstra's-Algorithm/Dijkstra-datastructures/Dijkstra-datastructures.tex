@@ -1,0 +1,27 @@
+\documentclass{standalone}
+
+\usepackage{bootstrapcolors}
+\usepackage{tcolorbox}
+\tcbuselibrary{listings}
+\tcbuselibrary{raster}
+\tcbuselibrary{skins}
+
+\usepackage{tikz}
+\usepackage{tkz-graph}
+\usetikzlibrary{trees}
+\usetikzlibrary{positioning}
+\usetikzlibrary{arrows}
+\usetikzlibrary{arrows.meta}
+
+\begin{document}
+\begin{tcbitemize}[raster equal height=rows,
+    raster every box/.style={size=small,valign=center,halign=center,colframe=white,colback=white}]
+    \tcbitem[blankest]
+    \begin{tcbitemize}[raster columns=1]
+    \tcbitem {\small \color{blue-300} \textbf{Distance Array}} \input{dij_1}
+    \tcbitem {\small \color{green-300} \textbf{Predecessor Array}} \input{dij_2}
+    \tcbitem {\small \color{indigo-300} \textbf{Marking Set}} \\ \input{dij_4}
+    \end{tcbitemize}
+    \tcbitem {\small \color{red-300} \textbf{Binary Min-Heap}} \\ \input{dij_3}
+\end{tcbitemize}
+\end{document}

@@ -1,0 +1,30 @@
+\documentclass[varwidth]{standalone}
+
+\usepackage{bootstrapcolors}
+
+\usepackage{geometry}
+\geometry{papersize={17cm,20cm}}
+
+\usepackage{tikz}
+\usepackage{tkz-graph}
+\usetikzlibrary{trees}
+\usetikzlibrary{positioning}
+\usetikzlibrary{arrows}
+\usetikzlibrary{arrows.meta}
+
+\begin{document}
+\begin{tikzpicture}[thick, main/.style = {draw=white, text=black, circle, fill=indigo-300,rounded corners=0.5mm,minimum size=2em}, scale=0.2,
+    selected/.style = {draw=white, text=black, circle, fill=pink-300,rounded corners=0.5mm,minimum size=2em}]
+    \matrix [column sep=1cm, row sep=0.3cm]{
+         & & \node[main,label=above:{$4$}] (2) {$y$}; \\
+         \node[main,label=above:{$0$}] (1) {$x$}; & & \\
+         & & \node[selected,label=below:{$5$}] (3) {$z$}; \\
+    };
+\draw[] (1) (2);
+\Edge[label = 4, style = {->, draw=indigo-300, very thick}](1)(2)
+\draw[] (1) (3);
+\Edge[label = 5, style = {->, draw=indigo-200, thick}](1)(3)
+\draw[] (2) (3);
+\Edge[label = -2, style = {->, draw=indigo-200, thick}](3)(2)
+\end{tikzpicture}
+\end{document}

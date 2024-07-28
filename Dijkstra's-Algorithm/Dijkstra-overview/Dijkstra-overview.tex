@@ -1,0 +1,50 @@
+\documentclass[aspectratio=169]{beamer}
+
+\usepackage{bootstrapcolors}
+\usepackage{geometry}
+\geometry{papersize={19cm,7cm}}
+
+\usepackage{tcolorbox}
+\tcbuselibrary{listings}
+\tcbuselibrary{raster}
+\tcbuselibrary{skins}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+
+\setbeamertemplate{navigation symbols}{} 
+\setbeamertemplate{footline}{}          
+\setbeamertemplate{headline}{}           
+\setbeamertemplate{caption}{}            
+\setbeamertemplate{blocks}{}             
+
+\begin{document}
+\begin{frame}
+     \begin{tcbraster}[raster columns=2, raster equal height,
+ raster every box/.style={size=small,valign=center,halign=center}]
+ \begin{tcolorbox}[title=SSSP problem,colframe=red!50!black,colback=red!10!white]
+ \textbf{SSSP $\widehat{=}$ Single-Source-Shortest-Path} \vspace{2mm}
+ 
+ Find the shortest way from a source to all other possible destinations
+ \end{tcolorbox}
+ \begin{tcolorbox}[title=Dijkstra's algorithm,colframe=green!50!black,colback=green!10!white]
+ \begin{enumerate}
+     \item Divide graph into visited and unvisited vertices.
+     \item Extend visited area by picking vertex with smallest distance, calculate
+ distances to all neighbors and update if possible.
+     \item Mark vertex as visited and repeat until graph is fully visited
+ \end{enumerate}
+ \end{tcolorbox}
+ \end{tcbraster}
+ \begin{tcbraster}[raster columns=2, raster equal height,
+ raster every box/.style={size=small,valign=center,halign=center}]
+ \begin{tcolorbox}[title=Running time,colframe=blue!50!black,colback=blue!10!white]
+     $\mathcal{O}((|V| + |E|) \log(|V|))$
+ \end{tcolorbox}
+ \begin{tcolorbox}[title=Limitations,colframe=blue!50!black,colback=blue!10!white]
+     Cannot be used with negative weights
+ \end{tcolorbox}
+ \end{tcbraster}
+ \end{frame}
+\end{document}
