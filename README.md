@@ -24,18 +24,6 @@
 <img src="img/rbtree.png" alt="Example of Red-Black-Tree" width="600"/>
 </div>
 
-
-<!--
-<div align="center">
-<h2>Highlights</h2>
-<div align="center"><p>Take a look at some highlights that you may not see in other projects.</p></div>
-</div>
-<ul>
-<li>The two projects <b>Stack-2</b> and <b>Gen-LinkedLists</b> provide an easy interface for generating a stack or a linked list. Just import the packages, create a new environment, pass some arguments and these structures will be automatically generated for you.</li>
-<li>Are you familiar with <a href="https://getbootstrap.com/">Bootstrap</a>? There are some nice implementations from Bootstrap's color system, Bootstrap's card container and Bootstrap's push notifications (toasts).</li>
-</ul>
-
-
 <div align="center">
 <h2>Links</h2>
 <div align="center"><p>For more help / inspiration / examples, have a look at these links.</p></div>
@@ -46,7 +34,6 @@
 <li><a href="https://tikz.dev/">PGF/Tikz Manual</a></li>
 <li><a href="https://detexify.kirelabs.org/classify.html">Detexify</a></li>
 </ul>
--->
 
 <div align="center">
 <h2>License</h2>
