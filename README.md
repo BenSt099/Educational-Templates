@@ -1,80 +1,29 @@
 <div align="center" style="margin-bottom: 70px">
 	<h1>Educational Templates</h1><br>
-	<div align="center"><p>This repository contains educational material made with Latex, LibreOffice Draw and other methods.</p></div>
-	<div align="center"><p>! This repository is currently under construction.</p></div>
+	<div align="center"><p>This repository contains educational material for your presentations, projects, lectures, etc. All materials werde made with Open-Source tools such as Latex, LibreOffice Draw and Python.</p></div>
 </div>
 
 <div align="center">
 <h2>Examples</h2>
+<div align="center"><p>Take a look at some highlights of this project:</p></div>
 </div>
 
 <div align="center">
-<table width="100%" margin-left="auto" margin-right="auto">
-	<tr>
-		<th>Red-Black-Trees</th>
-		<th>Sorting-Algorithm</th>
-		<th>ER-Diagram</th>
-	</tr>
-	<tr>
-		<td width="33%">
-			<img src="img/rbtrees.png" 
-				alt="Red-Black-Trees Exp" />
-		</td>
-		<td width="33%">
-			<img src="img/sortalg.png" 
-				alt="Sorting Algorithm Exp" />
-		</td>
-		<td width="33%">
-			<img src="img/erdiagram.png" 
-				alt="ER-Diagram Exp" />
-		</td>
-	</tr>
-</table>
-
-<table width="100%" margin-left="auto" margin-right="auto">
-	<tr>
-		<th>MTrans</th>
-		<th>Shortest-Path-Graph</th>
-		<th>Queue</th>
-	</tr>
-	<tr>
-		<td width="33%">
-			<img src="img/mtrans.png" 
-				alt="MTrans Exp" />
-		</td>
-		<td width="33%">
-			<img src="img/spgraph.png" 
-				alt="Shortest-Path-Graph Exp" />
-		</td>
-		<td width="33%">
-			<img src="img/queue.png" 
-				alt="Queue Exp" />
-		</td>
-	</tr>
-</table>
-
-<table width="100%" margin-left="auto" margin-right="auto">
-	<tr>
-		<th>Card</th>
-		<th>Clock</th>
-		<th>Circuits</th>
-	</tr>
-	<tr>
-		<td width="33%">
-			<img src="img/cardexp.png" 
-				alt="Card Exp" />
-		</td>
-		<td width="33%">
-			<img src="img/clock.png" 
-				alt="Clock Exp" />
-		</td>
-		<td width="33%">
-			<img src="img/circuits.png" 
-				alt="Circuits Exp" />
-		</td>
-	</tr>
-</table>
+<img src="Mandelbrot-Set/Mandelbrot-ColoredPictures/Region2_3.jpg" alt="Mandelbrot-Set Example" width="400"/>
 </div>
+
+<div align="center">
+<img src="img/dijkstra.png" alt="Components for Dijkstra's algorithm" width="600"/>
+</div>
+
+<div align="center">
+<img src="img/gene.png" alt="Example of gene expression" width="600"/>
+</div>
+
+<div align="center">
+<img src="img/rbtree.png" alt="Example of Red-Black-Tree" width="600"/>
+</div>
+
 
 <!--
 <div align="center">
