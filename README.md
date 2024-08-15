@@ -33,6 +33,7 @@
 <li><a href="https://www.latextemplates.com/">LaTeX Templates</a></li>
 <li><a href="https://tikz.dev/">PGF/Tikz Manual</a></li>
 <li><a href="https://detexify.kirelabs.org/classify.html">Detexify</a></li>
+<li><a href="https://github.com/MohamedYoussouf/Design-Resources">GitHUb repo with additional links</a></li>
 </ul>
 
 <div align="center">
