@@ -33,7 +33,15 @@
 <li><a href="https://www.latextemplates.com/">LaTeX Templates</a></li>
 <li><a href="https://tikz.dev/">PGF/Tikz Manual</a></li>
 <li><a href="https://detexify.kirelabs.org/classify.html">Detexify</a></li>
-<li><a href="https://github.com/MohamedYoussouf/Design-Resources">GitHUb repo with additional links</a></li>
+<li><a href="https://github.com/MohamedYoussouf/Design-Resources">GitHub repo with additional links</a></li>
+</ul>
+
+<div align="center"><p>Software that was used / that you can use.</p></div>
+<ul>
+<li><a href="https://www.libreoffice.org/">Libre Office (Draw)</a></li>
+<li><a href="https://www.python.org/">Python</a></li>
+<li><a href="https://www.latex-project.org/">Latex</a></li>
+<li><a href="https://www.yworks.com/products/yed">yEd - graph editor</a></li>
 </ul>
 
 <div align="center">
