@@ -1,0 +1,60 @@
+\documentclass{standalone}
+
+% Package for colors
+\usepackage{bootstrapcolors}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes.multipart} 
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{shapes.symbols}
+
+\begin{document}
+
+\begin{tikzpicture}[thick,scale=0.2,
+    %
+    rect/.style = {text=black, fill=blue-200, minimum size=2em},
+    rect_r/.style = {text=black, fill=blue-200, rounded corners=0.9mm, minimum size=2em},
+    circ/.style = {text=black, fill=blue-200, circle, minimum size=2em},
+    circone/.style = {text=black, fill=blue-200, circle, draw, minimum size=2em},
+    circdouble/.style = {text=black, fill=blue-200, circle, draw, double, minimum size=2em},
+    circthick/.style = {text=black, fill=blue-200, circle, draw, line width=2pt, minimum size=2em},
+    rbtreenode/.style = {text=white, fill=black, draw, double, circle, line width=2pt, minimum size=2em},
+    multi/.style = {text=black, fill=blue-200, circle split, minimum size=2em},
+    quadrangle/.style = {text=black, fill=blue-200, rounded corners=0.7mm, shape aspect=1, diamond, draw, minimum size=2em},
+    pentagon/.style = {text=black, fill=blue-200, rounded corners=0.7mm, regular polygon, regular polygon sides=5, draw, minimum size=2em},
+    starform/.style = {text=black, fill=blue-200, star, rounded corners=0.7mm, draw, minimum size=2em},
+    starformbig/.style = {text=black, fill=blue-200, star, star point height=.5cm, draw, minimum size=2em},
+    forbiddensign/.style = {text=black, fill=white, forbidden sign, draw=red-500, line width=2pt, minimum size=2em},
+    correctforbiddensign/.style = {text=black, fill=white, correct forbidden sign, draw=red-500, line width=2pt, minimum size=2em},
+    magnglass/.style = {text=black, fill=white, magnifying glass, line width=2pt, draw, minimum size=2em},
+    cloudy/.style = {text=black, fill=blue-200, cloud, line width=1pt, draw, minimum size=2em},
+    cloudyaspect/.style = {text=black, fill=blue-200, cloud, line width=1pt, draw, aspect=2, minimum size=2em},
+    starburstform/.style = {text=black, fill=yellow-400, starburst, line width=2pt, draw=red, aspect=2, minimum size=2em}
+    ]
+    %
+    \matrix[column sep=0.3cm, row sep=0.1cm]{
+         \node[rect] {$a$}; & \node[rect_r] {$h$}; 
+         & \node[circ] {$d$}; 
+         & \node[circone] {$d$}; 
+         & \node[circdouble] {$d$}; 
+         & \node[circthick] {$d$}; 
+         \\
+         \node[rbtreenode] {$p$}; 
+         & \node[multi] {\textit{a} \nodepart{lower} {\footnotesize b}};
+         & \node[quadrangle] {$g$};
+         & \node[pentagon] {$w$};
+         & \node[starform] {$s$};
+         & \node[starformbig] {$q$}; 
+         \\
+         \node[forbiddensign] {No!}; 
+         & \node[correctforbiddensign] {No!};
+         & \node[magnglass] {Zoom};
+         & \node[cloudy] {Cloud}; 
+         & \node[cloudyaspect] {Cloud}; 
+         & \node[starburstform] {Boom!}; 
+         \\
+         % ... some more shapes (take a look at: https://ctan.mirror.norbert-ruehl.de/graphics/pgf/base/doc/pgfmanual.pdf, Section Libraries/Shape Library)
+    };
+\end{tikzpicture}
+
+\end{document}
