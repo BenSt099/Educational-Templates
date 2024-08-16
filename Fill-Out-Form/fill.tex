@@ -1,0 +1,53 @@
+\documentclass[11pt]{article}
+
+\usepackage{geometry}
+\geometry{
+    left=2cm,
+    right=2cm,
+    top=2cm,
+    bottom=2cm
+}
+
+\usepackage{formpack}
+% ARG 1: Description of input field (e.g. 'surname' or 'E-Mail') (REQUIRED - No default value)
+% ARG 2: Width of input field (REQUIRED - No default value)
+% ARG 3: Height of input field
+% ARG 4: Background color of input field
+% ARG 5: Border color of input field
+% ARG 6: Border style of input field
+% ARG 7: Border width of input field
+% ARG 8: Color of input field
+% ARG 9: Value of input field
+% For default value, set ARG to "false" (without quotation marks)
+
+\begin{document}
+
+\begin{center}
+    \Large \textbf{ADMISSION FORM}\vspace{2mm}
+    \hrule
+\end{center}\vspace{10mm}
+
+
+\begin{formpackfieldTOP}
+    {Surname}{8cm}{false}{blue-100}{white}{false}{false}{red-300}{text}
+\end{formpackfieldTOP}
+
+\vspace{10mm}
+
+\begin{formpackfieldTOPNOLINE}
+    {Surname}{8cm}{false}{blue-100}{white}{false}{false}{red-300}{text}
+\end{formpackfieldTOPNOLINE}
+
+\vspace{10mm}
+
+\begin{formpackfieldBOTTOM}
+    {Surname}{8cm}{false}{blue-100}{white}{false}{false}{red-300}{text}
+\end{formpackfieldBOTTOM}
+
+\vspace{10mm}
+
+\begin{formpackfieldBOTTOMNOLINE}
+    {Surname}{8cm}{false}{blue-100}{white}{false}{false}{red-300}{text}
+\end{formpackfieldBOTTOMNOLINE}
+
+\end{document}

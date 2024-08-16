@@ -1,0 +1,232 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                  Package for Fill-Out-Forms with hyperref                %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% ARG 1: Description of input field (e.g. 'surname' or 'E-Mail') (REQUIRED - No default value)
+% ARG 2: Width of input field (REQUIRED - No default value)
+% ARG 3: Height of input field
+% ARG 4: Background color of input field
+% ARG 5: Border color of input field
+% ARG 6: Border style of input field
+% ARG 7: Border width of input field
+% ARG 8: Color of input field
+% ARG 9: Value of input field
+% For default value, set ARG to "false" (without quotation marks)
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{formpack}[2024/08/16 formpack]
+\RequirePackage[pdftex]{hyperref}
+\RequirePackage{bootstrapcolors}
+\RequirePackage{ifthen}
+
+\newenvironment{formpackfieldTOP}[9]{
+
+    \ifthenelse{\equal{false}{#3}}
+    {\def\varttt{\baselineskip}}
+    {\def\varttt{#3}}
+
+    \ifthenelse{\equal{false}{#4}}
+    {\def\vartttt{blue-100}}
+    {\def\vartttt{#4}}
+
+    \ifthenelse{\equal{false}{#5}}
+    {\def\varttttt{white}}
+    {\def\varttttt{#5}}
+
+    \ifthenelse{\equal{false}{#6}}
+    {\def\vartttttt{S}}
+    {\def\vartttttt{#6}}
+
+    \ifthenelse{\equal{false}{#7}}
+    {\def\varttttttt{1}}
+    {\def\varttttttt{#7}}
+
+    \ifthenelse{\equal{false}{#8}}
+    {\def\vartttttttt{black}}
+    {\def\vartttttttt{#8}}
+
+    \ifthenelse{\equal{false}{#9}}{
+        \begin{Form}
+            \vbox{
+                \hspace{-5mm}\textbf{#1} \vspace{2mm} \linebreak
+                \hbox{
+                    \TextField[width=#2, height=\varttt, backgroundcolor=\vartttt, bordercolor=\varttttt, borderstyle=\vartttttt, borderwidth=\varttttttt, color=\vartttttttt]{} \linebreak
+                }
+                \vspace{-3.5mm}
+            }
+        \end{Form}
+        \vspace{-0.5mm}
+        \hspace{-6mm}
+        \rule{#2}{0.5pt}
+    }{
+        \begin{Form}
+            \vbox{
+                \hspace{-5mm}\textbf{#1} \vspace{2mm} \linebreak
+                \hbox{
+                    \TextField[width=#2, height=\varttt, backgroundcolor=\vartttt, bordercolor=\varttttt, borderstyle=\vartttttt, borderwidth=\varttttttt, color=\vartttttttt, value=#9]{} \linebreak
+                }
+                \vspace{-3.5mm}
+            }
+        \end{Form}
+        \vspace{-0.5mm}
+        \hspace{-6mm}
+        \rule{#2}{0.5pt}
+    }
+}{}
+
+\newenvironment{formpackfieldTOPNOLINE}[9]{
+    
+    \ifthenelse{\equal{false}{#3}}
+    {\def\varttt{\baselineskip}}
+    {\def\varttt{#3}}
+
+    \ifthenelse{\equal{false}{#4}}
+    {\def\vartttt{blue-100}}
+    {\def\vartttt{#4}}
+
+    \ifthenelse{\equal{false}{#5}}
+    {\def\varttttt{white}}
+    {\def\varttttt{#5}}
+
+    \ifthenelse{\equal{false}{#6}}
+    {\def\vartttttt{S}}
+    {\def\vartttttt{#6}}
+
+    \ifthenelse{\equal{false}{#7}}
+    {\def\varttttttt{1}}
+    {\def\varttttttt{#7}}
+
+    \ifthenelse{\equal{false}{#8}}
+    {\def\vartttttttt{black}}
+    {\def\vartttttttt{#8}}
+
+    \ifthenelse{\equal{false}{#9}}{
+        \begin{Form}
+            \vbox{
+                \hspace{-5mm}\textbf{#1} \vspace{2mm} \linebreak
+                \hbox{
+                    \TextField[width=#2, height=\varttt, backgroundcolor=\vartttt, bordercolor=\varttttt, borderstyle=\vartttttt, borderwidth=\varttttttt, color=\vartttttttt]{} \linebreak
+                }
+            }
+        \end{Form}
+    }{
+        \begin{Form}
+            \vbox{
+                \hspace{-5mm}\textbf{#1} \vspace{2mm} \linebreak
+                \hbox{
+                    \TextField[width=#2, height=\varttt, backgroundcolor=\vartttt, bordercolor=\varttttt, borderstyle=\vartttttt, borderwidth=\varttttttt, color=\vartttttttt, value=#9]{} \linebreak
+                }
+            }
+        \end{Form}
+    }
+}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newenvironment{formpackfieldBOTTOM}[9]{
+
+    \ifthenelse{\equal{false}{#3}}
+    {\def\varttt{\baselineskip}}
+    {\def\varttt{#3}}
+
+    \ifthenelse{\equal{false}{#4}}
+    {\def\vartttt{blue-100}}
+    {\def\vartttt{#4}}
+
+    \ifthenelse{\equal{false}{#5}}
+    {\def\varttttt{white}}
+    {\def\varttttt{#5}}
+
+    \ifthenelse{\equal{false}{#6}}
+    {\def\vartttttt{S}}
+    {\def\vartttttt{#6}}
+
+    \ifthenelse{\equal{false}{#7}}
+    {\def\varttttttt{1}}
+    {\def\varttttttt{#7}}
+
+    \ifthenelse{\equal{false}{#8}}
+    {\def\vartttttttt{black}}
+    {\def\vartttttttt{#8}}
+
+    \ifthenelse{\equal{false}{#9}}{
+        \begin{Form}
+            \vbox{
+                \hbox{
+                    \TextField[width=#2, height=\varttt, backgroundcolor=\vartttt, bordercolor=\varttttt, borderstyle=\vartttttt, borderwidth=\varttttttt, color=\vartttttttt]{} \linebreak
+                }
+                \vspace{-3.5mm}
+            }
+        \end{Form}
+        \vspace{-0.5mm}
+        \hspace{-5mm}\rule{#2}{0.5pt} \linebreak \vspace{2mm} 
+        \hspace{-0.25mm}
+        \textbf{#1} 
+    }{
+        \begin{Form}
+            \vbox{
+                \hbox{
+                    \TextField[width=#2, height=\varttt, backgroundcolor=\vartttt, bordercolor=\varttttt, borderstyle=\vartttttt, borderwidth=\varttttttt, color=\vartttttttt, value=#9]{} \linebreak
+                }
+                \vspace{-3.5mm}
+            }
+        \end{Form}
+        \vspace{-0.5mm}
+        \hspace{-5mm}\rule{#2}{0.5pt} \linebreak \vspace{2mm} 
+        \hspace{-0.25mm}
+        \textbf{#1} 
+    }
+}{}
+
+\newenvironment{formpackfieldBOTTOMNOLINE}[9]{
+
+    \ifthenelse{\equal{false}{#3}}
+    {\def\varttt{\baselineskip}}
+    {\def\varttt{#3}}
+
+    \ifthenelse{\equal{false}{#4}}
+    {\def\vartttt{blue-100}}
+    {\def\vartttt{#4}}
+
+    \ifthenelse{\equal{false}{#5}}
+    {\def\varttttt{white}}
+    {\def\varttttt{#5}}
+
+    \ifthenelse{\equal{false}{#6}}
+    {\def\vartttttt{S}}
+    {\def\vartttttt{#6}}
+
+    \ifthenelse{\equal{false}{#7}}
+    {\def\varttttttt{1}}
+    {\def\varttttttt{#7}}
+
+    \ifthenelse{\equal{false}{#8}}
+    {\def\vartttttttt{black}}
+    {\def\vartttttttt{#8}}
+
+    \ifthenelse{\equal{false}{#9}}{
+        \begin{Form}
+            \vbox{
+                \hbox{
+                    \TextField[width=#2, height=\varttt, backgroundcolor=\vartttt, bordercolor=\varttttt, borderstyle=\vartttttt, borderwidth=\varttttttt, color=\vartttttttt]{} \linebreak
+                }
+                \vspace{-3.5mm}
+            }
+        \end{Form}
+        \vspace{3mm} 
+        \hspace{-5mm}\textbf{#1}
+    }{
+        \begin{Form}
+            \vbox{
+                \hbox{
+                    \TextField[width=#2, height=\varttt, backgroundcolor=\vartttt, bordercolor=\varttttt, borderstyle=\vartttttt, borderwidth=\varttttttt, color=\vartttttttt, value=#9]{} \linebreak
+                }
+                \vspace{-3.5mm}
+            }
+        \end{Form}
+        \vspace{3mm} 
+        \hspace{-5mm}\textbf{#1} 
+    }
+}{}
