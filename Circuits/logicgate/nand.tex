@@ -1,0 +1,13 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes.gates.logic.US,shapes.gates.logic.IEC,calc}
+\begin{document}
+\thispagestyle{empty}
+\tikzstyle{branch}=[fill,shape=circle,minimum size=3pt,inner sep=0pt]
+\begin{tikzpicture}
+    \node[nand gate US, draw, logic gate inputs=nn] at (0,0) (GNAND) {NAND};
+    \draw (GNAND.input 1 -| -1,0) -- (GNAND.input 1);
+    \draw (GNAND.input 2 -| -1,0) -- (GNAND.input 2);
+    \draw (GNAND.output) -- ++(right:3mm);
+\end{tikzpicture}
+\end{document}

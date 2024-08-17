@@ -1,0 +1,13 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes.gates.logic.US,shapes.gates.logic.IEC,calc}
+\begin{document}
+\thispagestyle{empty}
+\tikzstyle{branch}=[fill,shape=circle,minimum size=3pt,inner sep=0pt]
+\begin{tikzpicture}
+    \node[xor gate US, draw, logic gate inputs=nn] at (0,0) (GXOR) {XOR};
+    \draw (GXOR.input 1 -| -1,0) -- (GXOR.input 1);
+    \draw (GXOR.input 2 -| -1,0) -- (GXOR.input 2);
+    \draw (GXOR.output) -- ++(right:3mm);
+\end{tikzpicture}
+\end{document}

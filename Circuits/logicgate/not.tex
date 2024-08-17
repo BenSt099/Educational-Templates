@@ -1,0 +1,12 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes.gates.logic.US,shapes.gates.logic.IEC,calc}
+\begin{document}
+\thispagestyle{empty}
+\tikzstyle{branch}=[fill,shape=circle,minimum size=3pt,inner sep=0pt]
+\begin{tikzpicture}
+    \node[not gate US, draw] at (0,0) (GNOT) {NOT};
+     \draw  (GNOT.input -| -0.7,0) -- (GNOT.input);
+    \draw (GNOT.output) -- ++(right:3mm);
+\end{tikzpicture}
+\end{document}
