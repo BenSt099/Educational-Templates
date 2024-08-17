@@ -1,0 +1,1 @@
+To convert the pdf file produced by Latex into an svg, use linux tool: pdf2svg or.pdf or.svg

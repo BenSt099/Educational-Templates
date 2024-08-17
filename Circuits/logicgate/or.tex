@@ -5,9 +5,10 @@
 \thispagestyle{empty}
 \tikzstyle{branch}=[fill,shape=circle,minimum size=3pt,inner sep=0pt]
 \begin{tikzpicture}    
-    \node[or gate US, draw, logic gate inputs=nn] at (0,0) (GOR) {OR};
+    \node[or gate US, draw, logic gate inputs=nnn] at (0,0) (GOR) {OR};
     \draw (GOR.input 1 -| -0.7,0) -- (GOR.input 1);
     \draw (GOR.input 2 -| -0.7,0) -- (GOR.input 2);
+    \draw (GOR.input 3 -| -0.7,0) -- (GOR.input 3);
     \draw (GOR.output) -- ++(right:3mm);
 \end{tikzpicture}
 \end{document}
