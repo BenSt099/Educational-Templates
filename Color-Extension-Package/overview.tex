@@ -1,0 +1,74 @@
+\documentclass{article}
+\usepackage[table]{xcolor}
+\renewcommand{\arraystretch}{1.5}
+\usepackage{geometry}
+\geometry{
+    top=1cm,
+    bottom=1cm,
+    left=1cm,
+    right=1cm
+}
+
+\usepackage{lcep}
+
+\begin{document}
+\pagestyle{empty}
+\begin{center}
+    \LARGE
+    \textbf{Latex-Color-Extension-Package}
+\end{center}\vspace{10mm}
+
+\section{Theme Colors}
+
+\Large
+\begin{tabular}{ |c|c|c| } 
+    \hline 
+    \cellcolor{primary}\color{white} primary & \cellcolor{secondary}\color{white} secondary & \cellcolor{success}\color{white} success \\
+    \cellcolor{danger}\color{white} danger & \cellcolor{warning} warning & \cellcolor{info} info \\
+    \cellcolor{light} light & \cellcolor{dark}\color{white} dark & \\
+    \hline
+\end{tabular}
+
+\section{Color Blind Friendly}
+
+\Large
+\begin{tabular}{ |c|c|c| } 
+    \hline 
+    \cellcolor{cbf-black}\color{white} cbf-black & \cellcolor{cbf-orange}\color{white} cbf-orange & \cellcolor{cbf-lightblue}\color{white} cbf-lightblue \\
+    \cellcolor{cbf-green}\color{white} cbf-green & \cellcolor{cbf-yellow} cbf-yellow & \cellcolor{cbf-darkblue} cbf-darkblue \\
+    \cellcolor{cbf-red} cbf-red & \cellcolor{cbf-pink}\color{white} cbf-pink & \\
+    \hline
+\end{tabular}
+
+\section{All Colors}
+
+\Large
+\begin{tabular}{ |c|c|c|c|c|c|c| } 
+    \hline
+    \cellcolor{blue-100} blue-100 & \cellcolor{indigo-100} indigo-100 & \cellcolor{purple-100} purple-100 & \cellcolor{pink-100} pink-100 & \cellcolor{red-100} red-100 &  \cellcolor{orange-100} orange-100 & \cellcolor{yellow-100} yellow-100 \\ 
+    \cellcolor{blue-200} blue-200 & \cellcolor{indigo-200} indigo-200 & \cellcolor{purple-200} purple-200 & \cellcolor{pink-200} pink-200 & \cellcolor{red-200} red-200 &  \cellcolor{orange-200} orange-200 & \cellcolor{yellow-200} yellow-200 \\ 
+    \cellcolor{blue-300} blue-300 & \cellcolor{indigo-300} indigo-300 & \cellcolor{purple-300} purple-300 & \cellcolor{pink-300} pink-300 & \cellcolor{red-300} red-300 &  \cellcolor{orange-300} orange-300 & \cellcolor{yellow-300} yellow-300 \\ 
+    \cellcolor{blue-400} blue-400 & \cellcolor{indigo-400} indigo-400 & \cellcolor{purple-400} purple-400 & \cellcolor{pink-400} pink-400 & \cellcolor{red-400} red-400 &  \cellcolor{orange-400} orange-400 & \cellcolor{yellow-400} yellow-400 \\ 
+    \cellcolor{blue-500} blue-500 & \cellcolor{indigo-500} indigo-500 & \cellcolor{purple-500} purple-500 & \cellcolor{pink-500} pink-500 & \cellcolor{red-500} red-500 &  \cellcolor{orange-500} orange-500 & \cellcolor{yellow-500} yellow-500 \\ 
+    \cellcolor{blue-600} blue-600 & \cellcolor{indigo-600} indigo-600 & \cellcolor{purple-600} purple-600 & \cellcolor{pink-600} pink-600 & \cellcolor{red-600} red-600 &  \cellcolor{orange-600} orange-600 & \cellcolor{yellow-600} yellow-600 \\ 
+    \cellcolor{blue-700}\color{white} blue-700 & \cellcolor{indigo-700}\color{white} indigo-700 & \cellcolor{purple-700}\color{white} purple-700 & \cellcolor{pink-700}\color{white} pink-700 & \cellcolor{red-700}\color{white} red-700 &  \cellcolor{orange-700}\color{white} orange-700 & \cellcolor{yellow-700}\color{white} yellow-700 \\ 
+    \cellcolor{blue-800}\color{white} blue-800 & \cellcolor{indigo-800}\color{white} indigo-800 & \cellcolor{purple-800}\color{white} purple-800 & \cellcolor{pink-800}\color{white} pink-800 & \cellcolor{red-800}\color{white} red-800 &  \cellcolor{orange-800}\color{white} orange-800 & \cellcolor{yellow-800}\color{white} yellow-800 \\ 
+    \cellcolor{blue-900}\color{white} blue-900 & \cellcolor{indigo-900}\color{white} indigo-900 & \cellcolor{purple-900}\color{white} purple-900 & \cellcolor{pink-900}\color{white} pink-900 & \cellcolor{red-900}\color{white} red-900 &  \cellcolor{orange-900}\color{white} orange-900 & \cellcolor{yellow-900}\color{white} yellow-900 \\ 
+    \hline
+\end{tabular}\vspace{5mm}
+
+\begin{tabular}{ |c|c|c|c| } 
+    \hline
+    \cellcolor{green-100} green-100 & \cellcolor{teal-100} teal-100 & \cellcolor{cyan-100} cyan-100 & \cellcolor{gray-100} gray-100 \\ 
+    \cellcolor{green-200} green-200 & \cellcolor{teal-200} teal-200 & \cellcolor{cyan-200} cyan-200 & \cellcolor{gray-200} gray-200 \\ 
+    \cellcolor{green-300} green-300 & \cellcolor{teal-300} teal-300 & \cellcolor{cyan-300} cyan-300 & \cellcolor{gray-300} gray-300 \\ 
+    \cellcolor{green-400} green-400 & \cellcolor{teal-400} teal-400 & \cellcolor{cyan-400} cyan-400 & \cellcolor{gray-400} gray-400 \\ 
+    \cellcolor{green-500} green-500 & \cellcolor{teal-500} teal-500 & \cellcolor{cyan-500} cyan-500 & \cellcolor{gray-500} gray-500 \\ 
+    \cellcolor{green-600} green-600 & \cellcolor{teal-600} teal-600 & \cellcolor{cyan-600} cyan-600 & \cellcolor{gray-600} gray-600 \\ 
+    \cellcolor{green-700}\color{white} green-700 & \cellcolor{teal-700}\color{white} teal-700 & \cellcolor{cyan-700}\color{white} cyan-700 & \cellcolor{gray-700}\color{white} gray-700 \\ 
+    \cellcolor{green-800}\color{white} green-800 & \cellcolor{teal-800}\color{white} teal-800 & \cellcolor{cyan-800}\color{white} cyan-800 & \cellcolor{gray-800}\color{white} gray-800 \\ 
+    \cellcolor{green-900}\color{white} green-900 & \cellcolor{teal-900}\color{white} teal-900 & \cellcolor{cyan-900}\color{white} cyan-900 & \cellcolor{gray-900}\color{white} gray-900 \\ 
+    \hline
+\end{tabular}
+
+\end{document}
